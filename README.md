@@ -22,10 +22,18 @@ curl 'https://linux-helper.com/?list=full'
 
 ## Motivation
 
-Working on Linux often means the same cycle: forget a flag, open a new tab, search Stack Overflow or skim a long man page, copy an example, close the tab. That is friction you feel constantly on remote servers, in containers, or on locked-down hosts where tools are missing.
+- Working on Linux often means the same cycle:
+  - forget a flag
+  - open a new tab
+  - search Stack Overflow
+  - skim a long man page
+  - copy an example
+  - close the tab.
+- That is friction you feel constantly on remote servers, in containers, or on locked-down hosts where tools are missing.
 
 **linux-helper** targets that gap:
 
+- **No browser** or AI tools available
 - **No `man` available** — minimal containers, recovery shells, restricted environments  
 - **No desire for a full manual** — you want the *common* usage, not every option  
 - **Terminal-first workflow** — you are already in a shell; `curl` should be enough  
@@ -37,16 +45,18 @@ The project stays intentionally small: load JSON at startup, answer HTTP GET wit
 
 ## Hosted instance
 
-A public deployment is available at **[linux-helper.com](https://linux-helper.com)**. Point `curl` (or any HTTP client) at it from any machine with network access — useful on jump hosts, CI runners, and containers where you do not want to install a local help client.
-
+- A public deployment is available at **[linux-helper.com](https://linux-helper.com)**.
+- Point `curl` (or any HTTP client) at it from any machine with network access — useful on jump hosts, CI runners, and containers where you do not want to install a local help client.
+- Examples
+ 
 ```bash
-curl 'https://linux-helper.com/'
-curl 'https://linux-helper.com/?q=chmod'
-curl 'https://linux-helper.com/?q=permission'
-curl 'https://linux-helper.com/?q=pacman'
-```
+  curl 'https://linux-helper.com/'
+  curl 'https://linux-helper.com/?q=chmod'
+  curl 'https://linux-helper.com/?q=permission'
+  curl 'https://linux-helper.com/?q=pacman'
+  ```
 
-You can still **self-host** a private copy (see [Run locally](#run-locally)) when you need offline access, custom content, or traffic that must stay inside your network.
+>You can still **self-host** a private copy (see [Run locally](#run-locally)) when you need offline access, custom content, or traffic that must stay inside your network.
 
 ---
 
@@ -61,7 +71,8 @@ You can still **self-host** a private copy (see [Run locally](#run-locally)) whe
 | **Package cheatsheet** | At the bottom of the home page: update / install / remove per major distro |
 | **Plain text** | Designed for terminals — no HTML required, no JSON parsing needed |
 
-Content is stored as JSON (one detail file per command), loaded once at startup, and kept in memory. There is no database and no external API dependency for the core help text.
+- Content is stored as JSON (one detail file per command), loaded once at startup, and kept in memory.
+- There is no database and no external API dependency for the core help text.
 
 ---
 
