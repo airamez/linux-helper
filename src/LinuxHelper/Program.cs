@@ -1,7 +1,17 @@
 using LinuxHelper.Models;
 using LinuxHelper.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    // In containers, load Data/ next to the published files (not the process cwd).
+    ContentRootPath = AppContext.BaseDirectory
+});
+
+// Cloud Run injects PORT (often 8080). Prefer it over any static Urls config.
+var port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(port))
+    builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 // Load all command JSON at startup and keep it in memory for the process lifetime.
 builder.Services.AddSingleton<CommandCatalogService>();

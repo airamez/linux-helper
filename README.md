@@ -113,6 +113,95 @@ curl 'http://localhost:5000/?q=permission'
 
 Self-hosting is useful for air-gapped networks, custom command sets for your team, or development against a local checkout.
 
+### Docker (local)
+
+```bash
+docker build -t linux-helper .
+docker run --rm -e PORT=8080 -p 8080:8080 linux-helper
+
+curl 'http://localhost:8080/?q=ls'
+```
+
+### Deploy to Google Cloud Run
+
+The repo includes a multi-stage `Dockerfile` (SDK build → ASP.NET runtime). It does **not** use Native AOT — a normal framework-dependent publish that runs with `dotnet LinuxHelper.dll`.
+
+**1. Prerequisites**
+
+- [Google Cloud SDK](https://cloud.google.com/sdk) (`gcloud`) installed and logged in  
+- A GCP project with billing enabled  
+- APIs: Cloud Run, Artifact Registry (or Container Registry), Cloud Build  
+
+```bash
+gcloud config set project YOUR_PROJECT_ID
+gcloud services enable run.googleapis.com artifactregistry.googleapis.com cloudbuild.googleapis.com
+```
+
+**2. Build and deploy (Cloud Build → Cloud Run)**
+
+From the repository root:
+
+```bash
+# One-shot deploy (builds the Dockerfile and deploys)
+gcloud run deploy linux-helper \
+  --source . \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --port 8080 \
+  --memory 512Mi \
+  --cpu 1 \
+  --min-instances 0 \
+  --max-instances 3
+```
+
+`--source .` uses the Dockerfile in the repo. Cloud Run sets `PORT`; the app binds to `http://0.0.0.0:$PORT`.
+
+**3. Or build a local image and push**
+
+```bash
+# Example: Artifact Registry
+REGION=us-central1
+PROJECT_ID=YOUR_PROJECT_ID
+REPO=linux-helper
+IMAGE=$REGION-docker.pkg.dev/$PROJECT_ID/$REPO/linux-helper:latest
+
+gcloud artifacts repositories create $REPO \
+  --repository-format=docker \
+  --location=$REGION \
+  2>/dev/null || true
+
+gcloud builds submit --tag "$IMAGE" .
+
+gcloud run deploy linux-helper \
+  --image "$IMAGE" \
+  --region $REGION \
+  --allow-unauthenticated \
+  --port 8080 \
+  --memory 512Mi
+```
+
+**4. Map a custom domain** (e.g. linux-helper.com)
+
+In Cloud Run → your service → **Manage custom domains**, or:
+
+```bash
+gcloud run domain-mappings create \
+  --service linux-helper \
+  --domain linux-helper.com \
+  --region us-central1
+```
+
+Then add the DNS records Google shows (often a CNAME or A/AAAA at your DNS host).
+
+**Cloud Run notes**
+
+| Topic | Detail |
+|-------|--------|
+| **PORT** | Injected by Cloud Run; the app listens on `0.0.0.0:$PORT` |
+| **Cold starts** | `min-instances 0` saves cost; first request after idle may be slower |
+| **Memory** | 512 Mi is a reasonable start for this API |
+| **Auth** | `--allow-unauthenticated` for a public curl API |
+
 ---
 
 ## HTTP API

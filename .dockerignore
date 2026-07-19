@@ -1,0 +1,13 @@
+**/.git
+**/.gitignore
+**/.vs
+**/.vscode
+**/bin
+**/obj
+**/publish
+**/*.user
+**/*.dbg
+**/__pycache__
+**/.DS_Store
+README.md
+LICENSE
