@@ -1,0 +1,54 @@
+{
+  "name": "sed",
+  "description": "Edit streams non-interactively: substitute, delete, print lines matching patterns.",
+  "synopsis": "sed [OPTION]... {script} [FILE]...",
+  "tags": [
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "sed 's/foo/bar/' file",
+      "description": "Replace first foo on each line"
+    },
+    {
+      "command": "sed 's/foo/bar/g' file",
+      "description": "Replace all foo on each line"
+    },
+    {
+      "command": "sed -i 's/foo/bar/g' file",
+      "description": "Edit file in place"
+    },
+    {
+      "command": "sed -n '10,20p' file",
+      "description": "Print lines 10\u201320"
+    },
+    {
+      "command": "sed '/^#/d' file",
+      "description": "Delete comment lines"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "In-place edit (GNU; use -i.bak for backup)"
+    },
+    {
+      "flag": "-n",
+      "description": "Suppress automatic printing"
+    },
+    {
+      "flag": "-E",
+      "description": "Extended regex"
+    },
+    {
+      "flag": "-e script",
+      "description": "Add script"
+    }
+  ],
+  "related": [
+    "awk",
+    "grep",
+    "tr",
+    "cut"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "less",
+  "description": "Interactive pager. Navigate with arrows/PageUp/PageDown, search with /, quit with q.",
+  "synopsis": "less [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "less /var/log/syslog",
+      "description": "Page a log file"
+    },
+    {
+      "command": "journalctl | less",
+      "description": "Page a long command output"
+    },
+    {
+      "command": "less +F logfile",
+      "description": "Follow mode (like tail -f); Ctrl-C then q"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-N",
+      "description": "Show line numbers"
+    },
+    {
+      "flag": "-S",
+      "description": "Chop long lines (no wrap)"
+    },
+    {
+      "flag": "-i",
+      "description": "Ignore case in searches"
+    },
+    {
+      "flag": "+F",
+      "description": "Forward forever (follow)"
+    }
+  ],
+  "related": [
+    "more",
+    "cat",
+    "tail",
+    "head"
+  ],
+  "notes": "Inside less: /pattern search, n next match, g top, G bottom, h help, q quit."
+}

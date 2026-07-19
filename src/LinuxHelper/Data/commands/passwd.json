@@ -1,0 +1,54 @@
+{
+  "name": "passwd",
+  "description": "Set or change passwords. Regular users change their own; root can change any.",
+  "synopsis": "passwd [OPTION]... [LOGIN]",
+  "tags": [
+    "user",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "passwd",
+      "description": "Change your password"
+    },
+    {
+      "command": "sudo passwd alice",
+      "description": "Set alice's password"
+    },
+    {
+      "command": "sudo passwd -l alice",
+      "description": "Lock account"
+    },
+    {
+      "command": "sudo passwd -u alice",
+      "description": "Unlock account"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "Lock password"
+    },
+    {
+      "flag": "-u",
+      "description": "Unlock"
+    },
+    {
+      "flag": "-d",
+      "description": "Delete password (root)"
+    },
+    {
+      "flag": "-e",
+      "description": "Expire password; force change next login"
+    },
+    {
+      "flag": "-S",
+      "description": "Status"
+    }
+  ],
+  "related": [
+    "useradd",
+    "chpasswd",
+    "chage"
+  ]
+}

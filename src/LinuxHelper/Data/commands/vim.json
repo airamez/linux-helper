@@ -1,0 +1,65 @@
+{
+  "name": "vim",
+  "description": "Modal editor: Normal (navigate), Insert (type), Visual (select), Command-line (:w :q).",
+  "synopsis": "vim [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "vim file.txt",
+      "description": "Open file"
+    },
+    {
+      "command": "vim +10 file",
+      "description": "Open at line 10"
+    },
+    {
+      "command": "vimdiff a b",
+      "description": "Diff two files"
+    }
+  ],
+  "options": [
+    {
+      "flag": "i / a / o",
+      "description": "Insert / append / open line"
+    },
+    {
+      "flag": "Esc",
+      "description": "Back to Normal mode"
+    },
+    {
+      "flag": ":w",
+      "description": "Write/save"
+    },
+    {
+      "flag": ":q",
+      "description": "Quit"
+    },
+    {
+      "flag": ":wq / ZZ",
+      "description": "Save and quit"
+    },
+    {
+      "flag": ":q!",
+      "description": "Quit without saving"
+    },
+    {
+      "flag": "/pattern",
+      "description": "Search forward"
+    },
+    {
+      "flag": "dd / yy / p",
+      "description": "Delete line / yank / paste"
+    }
+  ],
+  "related": [
+    "nano",
+    "vi",
+    "nvim",
+    "emacs"
+  ],
+  "notes": "vimtutor is the best way to learn. nvim is often aliased similarly."
+}

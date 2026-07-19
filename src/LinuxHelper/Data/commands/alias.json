@@ -1,0 +1,33 @@
+{
+  "name": "alias",
+  "description": "Shell builtin to create command shortcuts for the current session.",
+  "synopsis": "alias [name[=value] ...]",
+  "tags": [
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "alias",
+      "description": "List aliases"
+    },
+    {
+      "command": "alias ll='ls -la'",
+      "description": "Create ll alias"
+    },
+    {
+      "command": "alias grep='grep --color=auto'",
+      "description": "Colorize grep"
+    },
+    {
+      "command": "unalias ll",
+      "description": "Remove alias"
+    }
+  ],
+  "options": [],
+  "related": [
+    "export",
+    "function",
+    "which"
+  ],
+  "notes": "Persist aliases in ~/.bashrc or ~/.zshrc."
+}

@@ -1,0 +1,57 @@
+{
+  "name": "wget",
+  "description": "Download files over HTTP/HTTPS/FTP. Strong recursive mirroring support.",
+  "synopsis": "wget [OPTION]... [URL]...",
+  "tags": [
+    "network",
+    "web"
+  ],
+  "examples": [
+    {
+      "command": "wget https://example.com/file.tgz",
+      "description": "Download a file"
+    },
+    {
+      "command": "wget -c URL",
+      "description": "Continue partial download"
+    },
+    {
+      "command": "wget -O out.bin URL",
+      "description": "Save as out.bin"
+    },
+    {
+      "command": "wget -r -np -k site/",
+      "description": "Mirror site (careful)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c",
+      "description": "Continue"
+    },
+    {
+      "flag": "-O FILE",
+      "description": "Output document"
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet"
+    },
+    {
+      "flag": "-r",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-np",
+      "description": "No parent"
+    },
+    {
+      "flag": "--limit-rate=R",
+      "description": "Throttle"
+    }
+  ],
+  "related": [
+    "curl",
+    "aria2c"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "ssh",
+  "description": "Secure remote shell. Also used for tunnels, file copy backends, and remote commands.",
+  "synopsis": "ssh [OPTION]... [user@]hostname [command]",
+  "tags": [
+    "network",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "ssh user@host",
+      "description": "Interactive login"
+    },
+    {
+      "command": "ssh -p 2222 user@host",
+      "description": "Custom port"
+    },
+    {
+      "command": "ssh user@host 'uptime'",
+      "description": "Run remote command"
+    },
+    {
+      "command": "ssh -i ~/.ssh/id_ed25519 user@host",
+      "description": "Specific key"
+    },
+    {
+      "command": "ssh -L 8080:localhost:80 user@host",
+      "description": "Local port forward"
+    },
+    {
+      "command": "ssh -N -D 1080 user@host",
+      "description": "SOCKS dynamic forward"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-p PORT",
+      "description": "Port"
+    },
+    {
+      "flag": "-i KEY",
+      "description": "Identity file"
+    },
+    {
+      "flag": "-L",
+      "description": "Local port forward"
+    },
+    {
+      "flag": "-R",
+      "description": "Remote port forward"
+    },
+    {
+      "flag": "-D",
+      "description": "Dynamic SOCKS"
+    },
+    {
+      "flag": "-N",
+      "description": "No remote command"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose (debug)"
+    },
+    {
+      "flag": "-A",
+      "description": "Agent forwarding"
+    }
+  ],
+  "related": [
+    "scp",
+    "sftp",
+    "sshd",
+    "ssh-keygen"
+  ]
+}

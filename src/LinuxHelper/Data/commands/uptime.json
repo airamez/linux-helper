@@ -1,0 +1,39 @@
+{
+  "name": "uptime",
+  "description": "Show current time, uptime, logged-in users, and load averages (1/5/15 min).",
+  "synopsis": "uptime [OPTION]",
+  "tags": [
+    "system",
+    "memory"
+  ],
+  "examples": [
+    {
+      "command": "uptime",
+      "description": "Classic one-liner"
+    },
+    {
+      "command": "uptime -p",
+      "description": "Pretty format"
+    },
+    {
+      "command": "uptime -s",
+      "description": "Boot time"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-p",
+      "description": "Pretty"
+    },
+    {
+      "flag": "-s",
+      "description": "Since when"
+    }
+  ],
+  "related": [
+    "top",
+    "w",
+    "who",
+    "free"
+  ]
+}

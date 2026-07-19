@@ -1,0 +1,53 @@
+{
+  "name": "tree",
+  "description": "Display directories and files in a hierarchical tree view. Often needs installing (tree package).",
+  "synopsis": "tree [OPTION]... [DIRECTORY]",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "tree",
+      "description": "Tree of current directory"
+    },
+    {
+      "command": "tree -L 2",
+      "description": "Limit depth to 2 levels"
+    },
+    {
+      "command": "tree -d",
+      "description": "Directories only"
+    },
+    {
+      "command": "tree -a",
+      "description": "Include hidden files"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-L N",
+      "description": "Max display depth"
+    },
+    {
+      "flag": "-d",
+      "description": "Directories only"
+    },
+    {
+      "flag": "-a",
+      "description": "All files"
+    },
+    {
+      "flag": "-h",
+      "description": "Human-readable sizes"
+    },
+    {
+      "flag": "-I PATTERN",
+      "description": "Exclude pattern"
+    }
+  ],
+  "related": [
+    "ls",
+    "find"
+  ]
+}

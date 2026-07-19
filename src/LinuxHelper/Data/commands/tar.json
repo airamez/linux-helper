@@ -1,0 +1,84 @@
+{
+  "name": "tar",
+  "description": "Create and extract .tar archives, often combined with gzip/bzip2/xz.",
+  "synopsis": "tar [OPTION...] [FILE]...",
+  "tags": [
+    "archive",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "tar -czf archive.tar.gz dir/",
+      "description": "Create gzip archive"
+    },
+    {
+      "command": "tar -xzf archive.tar.gz",
+      "description": "Extract gzip archive"
+    },
+    {
+      "command": "tar -tf archive.tar.gz",
+      "description": "List contents"
+    },
+    {
+      "command": "tar -xjf archive.tar.bz2",
+      "description": "Extract bzip2"
+    },
+    {
+      "command": "tar -cJf archive.tar.xz dir/",
+      "description": "Create xz archive"
+    },
+    {
+      "command": "tar -xzf a.tgz -C /target",
+      "description": "Extract into directory"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c",
+      "description": "Create"
+    },
+    {
+      "flag": "-x",
+      "description": "Extract"
+    },
+    {
+      "flag": "-t",
+      "description": "List"
+    },
+    {
+      "flag": "-f FILE",
+      "description": "Archive file"
+    },
+    {
+      "flag": "-z",
+      "description": "gzip"
+    },
+    {
+      "flag": "-j",
+      "description": "bzip2"
+    },
+    {
+      "flag": "-J",
+      "description": "xz"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-C DIR",
+      "description": "Change to DIR"
+    },
+    {
+      "flag": "-p",
+      "description": "Preserve permissions"
+    }
+  ],
+  "related": [
+    "gzip",
+    "zip",
+    "unzip",
+    "zstd"
+  ],
+  "notes": "Mnemonic: c=create, x=extract, t=list, f=file, z=gzip. Order of f matters: -f must precede the filename."
+}

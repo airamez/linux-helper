@@ -1,0 +1,69 @@
+{
+  "name": "sudo",
+  "description": "Run commands with elevated privileges (usually root) per /etc/sudoers policy.",
+  "synopsis": "sudo [OPTION]... COMMAND",
+  "tags": [
+    "security",
+    "user",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "sudo apt update",
+      "description": "Run package update as root"
+    },
+    {
+      "command": "sudo -i",
+      "description": "Root login shell"
+    },
+    {
+      "command": "sudo -u postgres psql",
+      "description": "Run as another user"
+    },
+    {
+      "command": "sudo !!",
+      "description": "Re-run last command with sudo (bash)"
+    },
+    {
+      "command": "sudo -l",
+      "description": "List allowed commands"
+    },
+    {
+      "command": "sudo -E command",
+      "description": "Preserve environment"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Simulate initial login"
+    },
+    {
+      "flag": "-u USER",
+      "description": "Run as USER"
+    },
+    {
+      "flag": "-l",
+      "description": "List privileges"
+    },
+    {
+      "flag": "-E",
+      "description": "Preserve user environment"
+    },
+    {
+      "flag": "-k",
+      "description": "Invalidate timestamp"
+    },
+    {
+      "flag": "-s",
+      "description": "Run shell"
+    }
+  ],
+  "related": [
+    "su",
+    "doas",
+    "pkexec",
+    "visudo"
+  ],
+  "notes": "Prefer least privilege. Edit sudoers with visudo only."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "cd",
+  "description": "Change the shell's working directory. Paths may be absolute or relative. Special tokens: ~ (home), - (previous), .. (parent).",
+  "synopsis": "cd [DIRECTORY]",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "cd /var/log",
+      "description": "Go to an absolute path"
+    },
+    {
+      "command": "cd ..",
+      "description": "Go up one directory"
+    },
+    {
+      "command": "cd ~",
+      "description": "Go to your home directory"
+    },
+    {
+      "command": "cd -",
+      "description": "Switch to the previous directory"
+    },
+    {
+      "command": "cd ~/projects",
+      "description": "Go to a path under home"
+    }
+  ],
+  "options": [],
+  "related": [
+    "pwd",
+    "ls",
+    "pushd",
+    "popd"
+  ]
+}

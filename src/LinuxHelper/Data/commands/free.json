@@ -1,0 +1,47 @@
+{
+  "name": "free",
+  "description": "Show RAM and swap usage.",
+  "synopsis": "free [OPTION]",
+  "tags": [
+    "memory",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "free -h",
+      "description": "Human-readable memory summary"
+    },
+    {
+      "command": "free -m",
+      "description": "Show in mebibytes"
+    },
+    {
+      "command": "free -s 2",
+      "description": "Refresh every 2 seconds"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-h",
+      "description": "Human-readable"
+    },
+    {
+      "flag": "-b/-k/-m/-g",
+      "description": "Bytes / KiB / MiB / GiB"
+    },
+    {
+      "flag": "-s N",
+      "description": "Repeat every N seconds"
+    },
+    {
+      "flag": "-t",
+      "description": "Show total line"
+    }
+  ],
+  "related": [
+    "top",
+    "htop",
+    "vmstat",
+    "ps"
+  ]
+}

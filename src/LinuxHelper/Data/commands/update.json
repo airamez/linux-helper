@@ -1,0 +1,48 @@
+{
+  "name": "update",
+  "description": "Meta entry: refresh indexes and upgrade packages per distro. Use with ?d=<distro>.",
+  "synopsis": "see distro variants",
+  "tags": [
+    "package",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "sudo apt update && sudo apt upgrade",
+      "description": "Debian / Ubuntu"
+    },
+    {
+      "command": "sudo dnf upgrade",
+      "description": "Fedora / RHEL family"
+    },
+    {
+      "command": "sudo pacman -Syu",
+      "description": "Arch"
+    },
+    {
+      "command": "sudo zypper refresh && sudo zypper update",
+      "description": "openSUSE"
+    },
+    {
+      "command": "sudo apk update && sudo apk upgrade",
+      "description": "Alpine"
+    }
+  ],
+  "options": [],
+  "related": [
+    "install",
+    "apt",
+    "dnf",
+    "pacman"
+  ],
+  "distroVariants": {
+    "ubuntu": "sudo apt update && sudo apt upgrade",
+    "debian": "sudo apt update && sudo apt upgrade",
+    "fedora": "sudo dnf upgrade",
+    "rhel": "sudo dnf upgrade",
+    "centos": "sudo dnf upgrade",
+    "arch": "sudo pacman -Syu",
+    "opensuse": "sudo zypper refresh && sudo zypper update",
+    "alpine": "sudo apk update && sudo apk upgrade"
+  }
+}

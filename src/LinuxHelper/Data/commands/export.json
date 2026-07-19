@@ -1,0 +1,29 @@
+{
+  "name": "export",
+  "description": "Mark variables for export to child processes (bash/posix shell builtin).",
+  "synopsis": "export [-fn] [name[=value] ...] | -p",
+  "tags": [
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "export PATH=\"$PATH:/opt/bin\"",
+      "description": "Prepend to PATH"
+    },
+    {
+      "command": "export EDITOR=vim",
+      "description": "Default editor for tools"
+    },
+    {
+      "command": "export -p",
+      "description": "List exported variables"
+    }
+  ],
+  "options": [],
+  "related": [
+    "env",
+    "unset",
+    "source"
+  ],
+  "notes": "For persistence, add exports to ~/.bashrc, ~/.profile, or /etc/environment."
+}

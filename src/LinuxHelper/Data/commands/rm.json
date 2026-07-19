@@ -1,0 +1,54 @@
+{
+  "name": "rm",
+  "description": "Delete files or directory trees. Irreversible by default \u2014 be careful with -r and wildcards, especially as root.",
+  "synopsis": "rm [OPTION]... FILE...",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "rm file.txt",
+      "description": "Delete a file"
+    },
+    {
+      "command": "rm -i *.log",
+      "description": "Prompt before each delete"
+    },
+    {
+      "command": "rm -rf build/",
+      "description": "Recursively force-delete a directory (dangerous)"
+    },
+    {
+      "command": "rm -v old_*",
+      "description": "Verbose delete matching files"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-r, -R",
+      "description": "Recursive (required for directories)"
+    },
+    {
+      "flag": "-f",
+      "description": "Force; ignore nonexistent files, no prompts"
+    },
+    {
+      "flag": "-i",
+      "description": "Prompt before every removal"
+    },
+    {
+      "flag": "-I",
+      "description": "Prompt once before removing more than three files"
+    },
+    {
+      "flag": "-v",
+      "description": "Explain what is being done"
+    }
+  ],
+  "related": [
+    "rmdir",
+    "mv",
+    "trash-put"
+  ],
+  "notes": "Prefer trash-cli or desktop trash when available. Never run rm -rf / or unquoted globs as root without checking first."
+}

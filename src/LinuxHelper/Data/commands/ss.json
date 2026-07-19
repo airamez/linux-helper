@@ -1,0 +1,63 @@
+{
+  "name": "ss",
+  "description": "Inspect sockets: listening ports, established connections. Preferred over netstat.",
+  "synopsis": "ss [OPTION]... [FILTER]",
+  "tags": [
+    "network",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "ss -tulpn",
+      "description": "Listening TCP/UDP with processes"
+    },
+    {
+      "command": "ss -s",
+      "description": "Summary statistics"
+    },
+    {
+      "command": "ss -tp",
+      "description": "TCP with processes"
+    },
+    {
+      "command": "ss dst 1.2.3.4",
+      "description": "Filter by destination"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-t",
+      "description": "TCP"
+    },
+    {
+      "flag": "-u",
+      "description": "UDP"
+    },
+    {
+      "flag": "-l",
+      "description": "Listening"
+    },
+    {
+      "flag": "-a",
+      "description": "All"
+    },
+    {
+      "flag": "-n",
+      "description": "Numeric, no resolve"
+    },
+    {
+      "flag": "-p",
+      "description": "Show process"
+    },
+    {
+      "flag": "-s",
+      "description": "Summary"
+    }
+  ],
+  "related": [
+    "ip",
+    "netstat",
+    "lsof",
+    "nmap"
+  ]
+}

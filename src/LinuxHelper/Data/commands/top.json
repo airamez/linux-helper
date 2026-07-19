@@ -1,0 +1,57 @@
+{
+  "name": "top",
+  "description": "Interactive process monitor sorted by CPU by default. Press q to quit, h for help.",
+  "synopsis": "top [OPTION]...",
+  "tags": [
+    "process",
+    "memory",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "top",
+      "description": "Interactive process monitor"
+    },
+    {
+      "command": "top -u root",
+      "description": "Only root's processes"
+    },
+    {
+      "command": "top -p 1234,5678",
+      "description": "Watch specific PIDs"
+    },
+    {
+      "command": "top -b -n 1",
+      "description": "Batch mode one snapshot (scripting)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u USER",
+      "description": "Filter by user"
+    },
+    {
+      "flag": "-p PID",
+      "description": "Monitor specific PIDs"
+    },
+    {
+      "flag": "-b",
+      "description": "Batch mode"
+    },
+    {
+      "flag": "-n N",
+      "description": "Number of iterations"
+    },
+    {
+      "flag": "-d SEC",
+      "description": "Delay between updates"
+    }
+  ],
+  "related": [
+    "htop",
+    "ps",
+    "free",
+    "vmstat"
+  ],
+  "notes": "Inside top: P sort CPU, M sort memory, k kill, 1 toggle per-CPU, q quit."
+}

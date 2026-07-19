@@ -1,0 +1,90 @@
+{
+  "name": "curl",
+  "description": "Swiss-army knife for HTTP and many other protocols. Great for APIs and debugging.",
+  "synopsis": "curl [OPTION]... [URL]...",
+  "tags": [
+    "network",
+    "web"
+  ],
+  "examples": [
+    {
+      "command": "curl https://example.com",
+      "description": "GET a URL"
+    },
+    {
+      "command": "curl -I https://example.com",
+      "description": "Headers only"
+    },
+    {
+      "command": "curl -o file.tgz URL",
+      "description": "Save to file"
+    },
+    {
+      "command": "curl -O URL",
+      "description": "Save using remote name"
+    },
+    {
+      "command": "curl -X POST -d 'a=1' URL",
+      "description": "POST form data"
+    },
+    {
+      "command": "curl -H 'Accept: application/json' URL",
+      "description": "Custom header"
+    },
+    {
+      "command": "curl -u user:pass URL",
+      "description": "HTTP basic auth"
+    },
+    {
+      "command": "curl -L URL",
+      "description": "Follow redirects"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-I",
+      "description": "HEAD / show headers"
+    },
+    {
+      "flag": "-O",
+      "description": "Remote-name output"
+    },
+    {
+      "flag": "-o FILE",
+      "description": "Write to FILE"
+    },
+    {
+      "flag": "-X METHOD",
+      "description": "HTTP method"
+    },
+    {
+      "flag": "-d DATA",
+      "description": "Request body"
+    },
+    {
+      "flag": "-H HEADER",
+      "description": "Add header"
+    },
+    {
+      "flag": "-L",
+      "description": "Follow redirects"
+    },
+    {
+      "flag": "-f",
+      "description": "Fail on HTTP errors"
+    },
+    {
+      "flag": "-s",
+      "description": "Silent"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    }
+  ],
+  "related": [
+    "wget",
+    "httpie",
+    "ssh"
+  ]
+}

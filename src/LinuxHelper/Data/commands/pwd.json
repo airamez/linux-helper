@@ -1,0 +1,29 @@
+{
+  "name": "pwd",
+  "description": "Print the absolute path of the current working directory.",
+  "synopsis": "pwd [-L|-P]",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "pwd",
+      "description": "Show current directory"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-L",
+      "description": "Logical path (default, follows shell view)"
+    },
+    {
+      "flag": "-P",
+      "description": "Physical path (resolve symlinks)"
+    }
+  ],
+  "related": [
+    "cd",
+    "ls"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "name": "pacman",
+  "description": "Arch Linux package manager. Sync (-S), remove (-R), query (-Q), upgrade (-Syu).",
+  "synopsis": "pacman <operation> [options] [targets]",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo pacman -Syu",
+      "description": "Full system upgrade"
+    },
+    {
+      "command": "sudo pacman -S nginx",
+      "description": "Install"
+    },
+    {
+      "command": "sudo pacman -Rns nginx",
+      "description": "Remove with deps and config"
+    },
+    {
+      "command": "pacman -Ss keyword",
+      "description": "Search sync DBs"
+    },
+    {
+      "command": "pacman -Qs keyword",
+      "description": "Search installed"
+    },
+    {
+      "command": "pacman -Qi nginx",
+      "description": "Info on installed package"
+    },
+    {
+      "command": "pacman -Ql nginx",
+      "description": "List package files"
+    },
+    {
+      "command": "sudo pacman -Syyu",
+      "description": "Force refresh then upgrade"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-Syu",
+      "description": "Refresh and upgrade"
+    },
+    {
+      "flag": "-S",
+      "description": "Sync/install"
+    },
+    {
+      "flag": "-R / -Rns",
+      "description": "Remove (+ deps + config)"
+    },
+    {
+      "flag": "-Q",
+      "description": "Query local DB"
+    },
+    {
+      "flag": "-Ss / -Qs",
+      "description": "Search remote / local"
+    },
+    {
+      "flag": "-Sc",
+      "description": "Clean cache"
+    }
+  ],
+  "related": [
+    "yay",
+    "paru",
+    "makepkg"
+  ],
+  "notes": "AUR helpers (yay/paru) are separate from pacman. Always read pacman output before proceeding.",
+  "distroVariants": {
+    "ubuntu": "Use: sudo apt install <pkg>",
+    "debian": "Use: sudo apt install <pkg>",
+    "fedora": "Use: sudo dnf install <pkg>",
+    "opensuse": "Use: sudo zypper install <pkg>",
+    "alpine": "Use: sudo apk add <pkg>"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "touch",
+  "description": "Create a file if missing, or update access/modification times.",
+  "synopsis": "touch [OPTION]... FILE...",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "touch notes.txt",
+      "description": "Create empty file or update mtime"
+    },
+    {
+      "command": "touch -c existing",
+      "description": "Do not create if missing"
+    },
+    {
+      "command": "touch -t 202401011200 file",
+      "description": "Set a specific timestamp"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c",
+      "description": "Do not create any files"
+    },
+    {
+      "flag": "-a",
+      "description": "Change access time only"
+    },
+    {
+      "flag": "-m",
+      "description": "Change modification time only"
+    },
+    {
+      "flag": "-t STAMP",
+      "description": "Use [[CC]YY]MMDDhhmm[.ss] instead of now"
+    }
+  ],
+  "related": [
+    "mkdir",
+    "stat",
+    "date"
+  ]
+}

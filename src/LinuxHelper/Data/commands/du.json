@@ -1,0 +1,59 @@
+{
+  "name": "du",
+  "description": "Summarize disk usage of files and directories.",
+  "synopsis": "du [OPTION]... [FILE]...",
+  "tags": [
+    "disk",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "du -sh *",
+      "description": "Size of each item in current dir"
+    },
+    {
+      "command": "du -h --max-depth=1",
+      "description": "One level of subdirs"
+    },
+    {
+      "command": "du -sh /var/log",
+      "description": "Total size of a path"
+    },
+    {
+      "command": "du -ah | sort -h | tail",
+      "description": "Largest items (approx)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-h",
+      "description": "Human-readable"
+    },
+    {
+      "flag": "-s",
+      "description": "Summarize; total only"
+    },
+    {
+      "flag": "-a",
+      "description": "All files, not just directories"
+    },
+    {
+      "flag": "--max-depth=N",
+      "description": "Limit directory depth (GNU)"
+    },
+    {
+      "flag": "-x",
+      "description": "Skip other filesystems"
+    },
+    {
+      "flag": "-c",
+      "description": "Grand total"
+    }
+  ],
+  "related": [
+    "df",
+    "ncdu",
+    "ls",
+    "find"
+  ]
+}

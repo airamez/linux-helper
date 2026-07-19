@@ -1,0 +1,47 @@
+{
+  "name": "htop",
+  "description": "Friendlier alternative to top with colors, mouse, and easier killing/searching. May need install.",
+  "synopsis": "htop [OPTION]...",
+  "tags": [
+    "process",
+    "memory",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "htop",
+      "description": "Open interactive viewer"
+    },
+    {
+      "command": "htop -u deploy",
+      "description": "Only one user's processes"
+    },
+    {
+      "command": "htop -p 1234",
+      "description": "Single PID"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u USER",
+      "description": "Show only USER's processes"
+    },
+    {
+      "flag": "-p PID",
+      "description": "Show only given PIDs"
+    },
+    {
+      "flag": "-t",
+      "description": "Tree view"
+    },
+    {
+      "flag": "-d DELAY",
+      "description": "Update delay in tenths of seconds"
+    }
+  ],
+  "related": [
+    "top",
+    "ps",
+    "kill"
+  ]
+}

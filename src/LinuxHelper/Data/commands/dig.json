@@ -1,0 +1,53 @@
+{
+  "name": "dig",
+  "description": "Flexible DNS query tool (bind-utils / dnsutils package).",
+  "synopsis": "dig [@server] [OPTIONS] name [type]",
+  "tags": [
+    "network"
+  ],
+  "examples": [
+    {
+      "command": "dig example.com",
+      "description": "A record lookup"
+    },
+    {
+      "command": "dig example.com MX",
+      "description": "Mail exchangers"
+    },
+    {
+      "command": "dig +short example.com",
+      "description": "Brief answer"
+    },
+    {
+      "command": "dig @1.1.1.1 example.com",
+      "description": "Query specific resolver"
+    },
+    {
+      "command": "dig -x 8.8.8.8",
+      "description": "Reverse lookup"
+    }
+  ],
+  "options": [
+    {
+      "flag": "+short",
+      "description": "Terse output"
+    },
+    {
+      "flag": "+trace",
+      "description": "Trace from root"
+    },
+    {
+      "flag": "-x ADDR",
+      "description": "Reverse lookup"
+    },
+    {
+      "flag": "@SERVER",
+      "description": "Nameserver to query"
+    }
+  ],
+  "related": [
+    "nslookup",
+    "host",
+    "ping"
+  ]
+}

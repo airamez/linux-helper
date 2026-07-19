@@ -1,0 +1,43 @@
+{
+  "name": "blkid",
+  "description": "Show filesystem type, UUID, and labels for block devices \u2014 useful for /etc/fstab entries.",
+  "synopsis": "blkid [options] [device...]",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "sudo blkid",
+      "description": "List attributes for all known devices"
+    },
+    {
+      "command": "sudo blkid /dev/sda1",
+      "description": "Info for one partition"
+    },
+    {
+      "command": "blkid -s UUID -o value /dev/sda1",
+      "description": "Print UUID only"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-s TAG",
+      "description": "Show only this tag (UUID, TYPE, LABEL)"
+    },
+    {
+      "flag": "-o FORMAT",
+      "description": "Output format (value, export, ...)"
+    },
+    {
+      "flag": "-p",
+      "description": "Low-level superblock probe"
+    }
+  ],
+  "related": [
+    "lsblk",
+    "findmnt",
+    "fdisk",
+    "mount"
+  ]
+}

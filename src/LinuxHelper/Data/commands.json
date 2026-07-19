@@ -1,0 +1,1497 @@
+{
+  "version": 1,
+  "commands": [
+    {
+      "name": "ls",
+      "summary": "List directory contents",
+      "example": "ls -lia",
+      "basic": true,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "ls.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": [
+        "ll"
+      ]
+    },
+    {
+      "name": "cd",
+      "summary": "Change the current directory",
+      "example": "cd ~",
+      "basic": true,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "cd.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "pwd",
+      "summary": "Print working directory",
+      "example": "pwd",
+      "basic": true,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "pwd.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "mkdir",
+      "summary": "Create directories",
+      "example": "mkdir -p path/to/dir",
+      "basic": true,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "mkdir.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "rmdir",
+      "summary": "Remove empty directories",
+      "example": "rmdir empty_dir",
+      "basic": false,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "rmdir.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "rm",
+      "summary": "Remove files or directories",
+      "example": "rm -rf dirname",
+      "basic": true,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "rm.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "cp",
+      "summary": "Copy files and directories",
+      "example": "cp -r src/ dest/",
+      "basic": true,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "cp.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "mv",
+      "summary": "Move or rename files",
+      "example": "mv old.txt new.txt",
+      "basic": true,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "mv.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "touch",
+      "summary": "Create empty file or update timestamps",
+      "example": "touch file.txt",
+      "basic": true,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "touch.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "find",
+      "summary": "Search for files in a directory tree",
+      "example": "find . -name '*.log'",
+      "basic": true,
+      "tags": [
+        "files",
+        "search"
+      ],
+      "detailFile": "find.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "locate",
+      "summary": "Find files by name using a database",
+      "example": "locate passwd",
+      "basic": false,
+      "tags": [
+        "files",
+        "search"
+      ],
+      "detailFile": "locate.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "tree",
+      "summary": "Show directory structure as a tree",
+      "example": "tree -L 2",
+      "basic": false,
+      "tags": [
+        "files",
+        "directory"
+      ],
+      "detailFile": "tree.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "cat",
+      "summary": "Concatenate and print files",
+      "example": "cat file.txt",
+      "basic": true,
+      "tags": [
+        "files",
+        "text"
+      ],
+      "detailFile": "cat.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "less",
+      "summary": "Page through a file or stream",
+      "example": "less file.txt",
+      "basic": true,
+      "tags": [
+        "files",
+        "text"
+      ],
+      "detailFile": "less.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "head",
+      "summary": "Output the first part of files",
+      "example": "head -n 20 file.txt",
+      "basic": true,
+      "tags": [
+        "files",
+        "text"
+      ],
+      "detailFile": "head.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "tail",
+      "summary": "Output the last part of files",
+      "example": "tail -f /var/log/syslog",
+      "basic": true,
+      "tags": [
+        "files",
+        "text"
+      ],
+      "detailFile": "tail.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "chmod",
+      "summary": "Change file mode bits (permissions)",
+      "example": "chmod +x script.sh",
+      "basic": true,
+      "tags": [
+        "files",
+        "permissions",
+        "security"
+      ],
+      "detailFile": "chmod.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "chown",
+      "summary": "Change file owner and group",
+      "example": "sudo chown user:group file",
+      "basic": true,
+      "tags": [
+        "files",
+        "permissions",
+        "user"
+      ],
+      "detailFile": "chown.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ln",
+      "summary": "Create hard or symbolic links",
+      "example": "ln -s /path/to/target linkname",
+      "basic": true,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "ln.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "stat",
+      "summary": "Display file or filesystem status",
+      "example": "stat file.txt",
+      "basic": false,
+      "tags": [
+        "files",
+        "disk"
+      ],
+      "detailFile": "stat.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "file",
+      "summary": "Determine file type",
+      "example": "file document.pdf",
+      "basic": false,
+      "tags": [
+        "files"
+      ],
+      "detailFile": "file.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "df",
+      "summary": "Report file system disk space usage",
+      "example": "df -h",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "df.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "du",
+      "summary": "Estimate file space usage",
+      "example": "du -sh *",
+      "basic": true,
+      "tags": [
+        "disk",
+        "files"
+      ],
+      "detailFile": "du.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "free",
+      "summary": "Display amount of free and used memory",
+      "example": "free -h",
+      "basic": true,
+      "tags": [
+        "memory",
+        "system"
+      ],
+      "detailFile": "free.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "lsblk",
+      "summary": "List disks, partitions, and mount points",
+      "example": "lsblk -f",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "lsblk.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "fdisk",
+      "summary": "List or edit disk partition tables",
+      "example": "sudo fdisk -l",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "fdisk.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "blkid",
+      "summary": "Print block device attributes (UUID, TYPE, LABEL)",
+      "example": "sudo blkid",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "blkid.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "findmnt",
+      "summary": "List mounted filesystems in a tree",
+      "example": "findmnt",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "findmnt.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "mount",
+      "summary": "Mount a filesystem (or list mounts)",
+      "example": "mount | head",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "mount.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "umount",
+      "summary": "Unmount filesystems",
+      "example": "sudo umount /mnt",
+      "basic": true,
+      "tags": [
+        "disk",
+        "system"
+      ],
+      "detailFile": "umount.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "grep",
+      "summary": "Print lines matching a pattern",
+      "example": "grep -rn 'pattern' .",
+      "basic": true,
+      "tags": [
+        "text",
+        "search"
+      ],
+      "detailFile": "grep.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "sed",
+      "summary": "Stream editor for filtering and transforming text",
+      "example": "sed 's/foo/bar/g' file",
+      "basic": true,
+      "tags": [
+        "text"
+      ],
+      "detailFile": "sed.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "awk",
+      "summary": "Pattern scanning and text processing language",
+      "example": "awk '{print $1}' file",
+      "basic": false,
+      "tags": [
+        "text"
+      ],
+      "detailFile": "awk.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "cut",
+      "summary": "Remove sections from each line",
+      "example": "cut -d: -f1 /etc/passwd",
+      "basic": false,
+      "tags": [
+        "text"
+      ],
+      "detailFile": "cut.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "sort",
+      "summary": "Sort lines of text files",
+      "example": "sort file.txt",
+      "basic": true,
+      "tags": [
+        "text"
+      ],
+      "detailFile": "sort.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "uniq",
+      "summary": "Report or omit repeated lines",
+      "example": "sort file | uniq",
+      "basic": false,
+      "tags": [
+        "text"
+      ],
+      "detailFile": "uniq.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "wc",
+      "summary": "Print newline, word, and byte counts",
+      "example": "wc -l file.txt",
+      "basic": true,
+      "tags": [
+        "text",
+        "files"
+      ],
+      "detailFile": "wc.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "diff",
+      "summary": "Compare files line by line",
+      "example": "diff a.txt b.txt",
+      "basic": false,
+      "tags": [
+        "text",
+        "files"
+      ],
+      "detailFile": "diff.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "tee",
+      "summary": "Read stdin and write to stdout and files",
+      "example": "command | tee out.txt",
+      "basic": false,
+      "tags": [
+        "text",
+        "files"
+      ],
+      "detailFile": "tee.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "echo",
+      "summary": "Display a line of text",
+      "example": "echo 'hello'",
+      "basic": true,
+      "tags": [
+        "text",
+        "shell"
+      ],
+      "detailFile": "echo.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ps",
+      "summary": "Report a snapshot of current processes",
+      "example": "ps aux",
+      "basic": true,
+      "tags": [
+        "process",
+        "system"
+      ],
+      "detailFile": "ps.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "top",
+      "summary": "Dynamic real-time process view",
+      "example": "top",
+      "basic": true,
+      "tags": [
+        "process",
+        "memory",
+        "system"
+      ],
+      "detailFile": "top.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "htop",
+      "summary": "Interactive process viewer (enhanced)",
+      "example": "htop -u deploy",
+      "basic": false,
+      "tags": [
+        "process",
+        "memory",
+        "system"
+      ],
+      "detailFile": "htop.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "kill",
+      "summary": "Send a signal to a process",
+      "example": "kill PID",
+      "basic": true,
+      "tags": [
+        "process"
+      ],
+      "detailFile": "kill.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "killall",
+      "summary": "Kill processes by name",
+      "example": "killall firefox",
+      "basic": false,
+      "tags": [
+        "process"
+      ],
+      "detailFile": "killall.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "jobs",
+      "summary": "List active shell jobs",
+      "example": "jobs -l",
+      "basic": false,
+      "tags": [
+        "process",
+        "shell"
+      ],
+      "detailFile": "jobs.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "bg",
+      "summary": "Resume job in the background",
+      "example": "bg %1",
+      "basic": false,
+      "tags": [
+        "process",
+        "shell"
+      ],
+      "detailFile": "bg.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "fg",
+      "summary": "Bring job to the foreground",
+      "example": "fg %2",
+      "basic": false,
+      "tags": [
+        "process",
+        "shell"
+      ],
+      "detailFile": "fg.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "nohup",
+      "summary": "Run a command immune to hangups",
+      "example": "nohup ./long-job.sh &",
+      "basic": false,
+      "tags": [
+        "process",
+        "shell"
+      ],
+      "detailFile": "nohup.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "systemctl",
+      "summary": "Control the systemd system and service manager",
+      "example": "systemctl status nginx",
+      "basic": true,
+      "tags": [
+        "process",
+        "system",
+        "service"
+      ],
+      "detailFile": "systemctl.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "journalctl",
+      "summary": "Query the systemd journal",
+      "example": "journalctl -xe",
+      "basic": false,
+      "tags": [
+        "system",
+        "text",
+        "service"
+      ],
+      "detailFile": "journalctl.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ping",
+      "summary": "Send ICMP ECHO_REQUEST to network hosts",
+      "example": "ping -c 4 8.8.8.8",
+      "basic": true,
+      "tags": [
+        "network"
+      ],
+      "detailFile": "ping.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "curl",
+      "summary": "Transfer data from or to a server",
+      "example": "curl -I https://example.com",
+      "basic": true,
+      "tags": [
+        "network",
+        "web"
+      ],
+      "detailFile": "curl.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "wget",
+      "summary": "Non-interactive network downloader",
+      "example": "wget https://example.com/file.tgz",
+      "basic": true,
+      "tags": [
+        "network",
+        "web"
+      ],
+      "detailFile": "wget.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ssh",
+      "summary": "OpenSSH remote login client",
+      "example": "ssh user@host",
+      "basic": true,
+      "tags": [
+        "network",
+        "security"
+      ],
+      "detailFile": "ssh.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "scp",
+      "summary": "Secure copy (remote file copy over SSH)",
+      "example": "scp file.txt user@host:/tmp/",
+      "basic": true,
+      "tags": [
+        "network",
+        "files"
+      ],
+      "detailFile": "scp.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "rsync",
+      "summary": "Fast incremental file transfer",
+      "example": "rsync -av src/ dest/",
+      "basic": true,
+      "tags": [
+        "network",
+        "files"
+      ],
+      "detailFile": "rsync.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ss",
+      "summary": "Socket statistics (modern netstat)",
+      "example": "ss -tulpn",
+      "basic": false,
+      "tags": [
+        "network",
+        "system"
+      ],
+      "detailFile": "ss.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "ip",
+      "summary": "Show / manipulate routing, devices, policy routing",
+      "example": "ip a",
+      "basic": true,
+      "tags": [
+        "network",
+        "system"
+      ],
+      "detailFile": "ip.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "hostname",
+      "summary": "Show or set the system's host name",
+      "example": "hostname -f",
+      "basic": false,
+      "tags": [
+        "network",
+        "system"
+      ],
+      "detailFile": "hostname.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "dig",
+      "summary": "DNS lookup utility",
+      "example": "dig example.com",
+      "basic": false,
+      "tags": [
+        "network"
+      ],
+      "detailFile": "dig.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "uname",
+      "summary": "Print system information",
+      "example": "uname -a",
+      "basic": true,
+      "tags": [
+        "system"
+      ],
+      "detailFile": "uname.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "whoami",
+      "summary": "Print effective userid",
+      "example": "whoami",
+      "basic": true,
+      "tags": [
+        "user",
+        "system"
+      ],
+      "detailFile": "whoami.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "id",
+      "summary": "Print real and effective user/group IDs",
+      "example": "id",
+      "basic": true,
+      "tags": [
+        "user",
+        "security"
+      ],
+      "detailFile": "id.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "uptime",
+      "summary": "Tell how long the system has been running",
+      "example": "uptime",
+      "basic": true,
+      "tags": [
+        "system",
+        "memory"
+      ],
+      "detailFile": "uptime.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "lscpu",
+      "summary": "Display CPU architecture information",
+      "example": "lscpu -e",
+      "basic": false,
+      "tags": [
+        "system"
+      ],
+      "detailFile": "lscpu.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "dmesg",
+      "summary": "Print or control the kernel ring buffer",
+      "example": "dmesg -T",
+      "basic": false,
+      "tags": [
+        "system"
+      ],
+      "detailFile": "dmesg.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "history",
+      "summary": "Display or manipulate the shell history list",
+      "example": "history | tail",
+      "basic": true,
+      "tags": [
+        "shell"
+      ],
+      "detailFile": "history.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "date",
+      "summary": "Print or set the system date and time",
+      "example": "date",
+      "basic": true,
+      "tags": [
+        "system"
+      ],
+      "detailFile": "date.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "env",
+      "summary": "Run a program in a modified environment / print env",
+      "example": "env | grep PATH",
+      "basic": false,
+      "tags": [
+        "shell",
+        "system"
+      ],
+      "detailFile": "env.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "export",
+      "summary": "Set export attribute for shell variables",
+      "example": "export PATH=\"$PATH:/opt/bin\"",
+      "basic": false,
+      "tags": [
+        "shell"
+      ],
+      "detailFile": "export.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "which",
+      "summary": "Locate a command",
+      "example": "which python3",
+      "basic": true,
+      "tags": [
+        "shell",
+        "search"
+      ],
+      "detailFile": "which.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "whereis",
+      "summary": "Locate binary, source, and man page",
+      "example": "whereis ls",
+      "basic": false,
+      "tags": [
+        "shell",
+        "search"
+      ],
+      "detailFile": "whereis.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "man",
+      "summary": "Interface to the system reference manuals",
+      "example": "man ls",
+      "basic": true,
+      "tags": [
+        "shell",
+        "docs"
+      ],
+      "detailFile": "man.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "sudo",
+      "summary": "Execute a command as another user",
+      "example": "sudo command",
+      "basic": true,
+      "tags": [
+        "security",
+        "user",
+        "system"
+      ],
+      "detailFile": "sudo.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "su",
+      "summary": "Switch user / become another user",
+      "example": "su -",
+      "basic": false,
+      "tags": [
+        "security",
+        "user"
+      ],
+      "detailFile": "su.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "tar",
+      "summary": "An archiving utility",
+      "example": "tar -xzf archive.tar.gz",
+      "basic": true,
+      "tags": [
+        "archive",
+        "files"
+      ],
+      "detailFile": "tar.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "gzip",
+      "summary": "Compress or expand files (gzip)",
+      "example": "gzip file.txt",
+      "basic": false,
+      "tags": [
+        "archive",
+        "files"
+      ],
+      "detailFile": "gzip.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "zip",
+      "summary": "Package and compress files",
+      "example": "zip -r archive.zip dir/",
+      "basic": true,
+      "tags": [
+        "archive",
+        "files"
+      ],
+      "detailFile": "zip.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "unzip",
+      "summary": "List, test, and extract compressed ZIP files",
+      "example": "unzip archive.zip",
+      "basic": true,
+      "tags": [
+        "archive",
+        "files"
+      ],
+      "detailFile": "unzip.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "apt",
+      "summary": "APT package manager (Debian/Ubuntu)",
+      "example": "sudo apt update && sudo apt install <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "apt.json",
+      "distros": [
+        "ubuntu",
+        "debian"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "dnf",
+      "summary": "Package manager for Fedora / RHEL family",
+      "example": "sudo dnf install <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "dnf.json",
+      "distros": [
+        "fedora",
+        "rhel",
+        "centos"
+      ],
+      "aliases": [
+        "yum"
+      ]
+    },
+    {
+      "name": "pacman",
+      "summary": "Package manager utility (Arch Linux)",
+      "example": "sudo pacman -S <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "pacman.json",
+      "distros": [
+        "arch"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "apk",
+      "summary": "Alpine package keeper",
+      "example": "sudo apk add <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "apk.json",
+      "distros": [
+        "alpine"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "zypper",
+      "summary": "Command line package manager (openSUSE)",
+      "example": "sudo zypper install <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "zypper.json",
+      "distros": [
+        "opensuse"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "install",
+      "summary": "Distro-aware package install cheat-sheet",
+      "example": "sudo apt install <pkg>",
+      "basic": false,
+      "tags": [
+        "package"
+      ],
+      "detailFile": "install.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "update",
+      "summary": "Distro-aware system update cheat-sheet",
+      "example": "sudo apt update && sudo apt upgrade",
+      "basic": false,
+      "tags": [
+        "package",
+        "system"
+      ],
+      "detailFile": "update.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "useradd",
+      "summary": "Create a new user or update default user information",
+      "example": "sudo useradd -m -s /bin/bash alice",
+      "basic": false,
+      "tags": [
+        "user",
+        "security"
+      ],
+      "detailFile": "useradd.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "userdel",
+      "summary": "Delete a user account",
+      "example": "sudo userdel alice",
+      "basic": false,
+      "tags": [
+        "user",
+        "security"
+      ],
+      "detailFile": "userdel.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "passwd",
+      "summary": "Change user password",
+      "example": "sudo passwd alice",
+      "basic": false,
+      "tags": [
+        "user",
+        "security"
+      ],
+      "detailFile": "passwd.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "groups",
+      "summary": "Print the groups a user is in",
+      "example": "groups alice",
+      "basic": false,
+      "tags": [
+        "user"
+      ],
+      "detailFile": "groups.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "crontab",
+      "summary": "Maintain crontab files for individual users",
+      "example": "crontab -e",
+      "basic": true,
+      "tags": [
+        "system",
+        "process"
+      ],
+      "detailFile": "crontab.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "alias",
+      "summary": "Define or display aliases",
+      "example": "alias ll='ls -la'",
+      "basic": false,
+      "tags": [
+        "shell"
+      ],
+      "detailFile": "alias.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "source",
+      "summary": "Execute commands from a file in the current shell",
+      "example": "source ~/.bashrc",
+      "basic": false,
+      "tags": [
+        "shell"
+      ],
+      "detailFile": "source.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": [
+        "."
+      ]
+    },
+    {
+      "name": "xargs",
+      "summary": "Build and execute command lines from standard input",
+      "example": "find . -name '*.log' | xargs rm",
+      "basic": false,
+      "tags": [
+        "shell",
+        "text"
+      ],
+      "detailFile": "xargs.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "watch",
+      "summary": "Execute a program periodically, showing output fullscreen",
+      "example": "watch -n 1 df -h",
+      "basic": false,
+      "tags": [
+        "process",
+        "system"
+      ],
+      "detailFile": "watch.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "lsof",
+      "summary": "List open files",
+      "example": "lsof /var/log/syslog",
+      "basic": false,
+      "tags": [
+        "process",
+        "files",
+        "network"
+      ],
+      "detailFile": "lsof.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "tmux",
+      "summary": "Terminal multiplexer",
+      "example": "tmux new -s work",
+      "basic": true,
+      "tags": [
+        "shell",
+        "process"
+      ],
+      "detailFile": "tmux.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "nano",
+      "summary": "Simple terminal text editor",
+      "example": "nano file.txt",
+      "basic": true,
+      "tags": [
+        "files",
+        "text",
+        "shell"
+      ],
+      "detailFile": "nano.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": []
+    },
+    {
+      "name": "vim",
+      "summary": "Vi IMproved, a programmer's text editor",
+      "example": "vim file.txt",
+      "basic": true,
+      "tags": [
+        "files",
+        "text",
+        "shell"
+      ],
+      "detailFile": "vim.json",
+      "distros": [
+        "all"
+      ],
+      "aliases": [
+        "vi",
+        "nvim"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "whereis",
+  "description": "Find the binary, source, and manual pages for a command.",
+  "synopsis": "whereis [OPTION]... name...",
+  "tags": [
+    "shell",
+    "search"
+  ],
+  "examples": [
+    {
+      "command": "whereis ls",
+      "description": "Binary and manpage for ls"
+    },
+    {
+      "command": "whereis -b python3",
+      "description": "Binary only"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-b",
+      "description": "Search only binaries"
+    },
+    {
+      "flag": "-m",
+      "description": "Manual pages only"
+    },
+    {
+      "flag": "-s",
+      "description": "Sources only"
+    }
+  ],
+  "related": [
+    "which",
+    "type",
+    "man",
+    "locate"
+  ]
+}

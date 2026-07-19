@@ -1,0 +1,55 @@
+{
+  "name": "df",
+  "description": "Show free/used space on mounted filesystems.",
+  "synopsis": "df [OPTION]... [FILE]...",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "df -h",
+      "description": "Human-readable sizes"
+    },
+    {
+      "command": "df -h /",
+      "description": "Space for the filesystem containing /"
+    },
+    {
+      "command": "df -i",
+      "description": "Inode usage"
+    },
+    {
+      "command": "df -T",
+      "description": "Show filesystem type"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-h",
+      "description": "Human-readable (powers of 1024)"
+    },
+    {
+      "flag": "-H",
+      "description": "Human-readable SI (powers of 1000)"
+    },
+    {
+      "flag": "-i",
+      "description": "Inode information"
+    },
+    {
+      "flag": "-T",
+      "description": "Print filesystem type"
+    },
+    {
+      "flag": "-x TYPE",
+      "description": "Exclude filesystem type"
+    }
+  ],
+  "related": [
+    "du",
+    "lsblk",
+    "mount",
+    "stat"
+  ]
+}

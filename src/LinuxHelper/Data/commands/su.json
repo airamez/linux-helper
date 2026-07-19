@@ -1,0 +1,42 @@
+{
+  "name": "su",
+  "description": "Start a shell as another user. su - (or su -l) gives a login environment.",
+  "synopsis": "su [OPTION]... [-] [USER [ARG]...]",
+  "tags": [
+    "security",
+    "user"
+  ],
+  "examples": [
+    {
+      "command": "su -",
+      "description": "Login shell as root (password)"
+    },
+    {
+      "command": "su - alice",
+      "description": "Login as alice"
+    },
+    {
+      "command": "su -c 'whoami'",
+      "description": "Run one command as root"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-, -l",
+      "description": "Login shell"
+    },
+    {
+      "flag": "-c CMD",
+      "description": "Pass command to the shell"
+    },
+    {
+      "flag": "-s SHELL",
+      "description": "Shell to use"
+    }
+  ],
+  "related": [
+    "sudo",
+    "login"
+  ],
+  "notes": "On many desktops, sudo is preferred over su for audited, limited elevation."
+}

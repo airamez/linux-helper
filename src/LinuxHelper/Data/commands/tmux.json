@@ -1,0 +1,38 @@
+{
+  "name": "tmux",
+  "description": "Multiple terminals in one session; detach and reattach later. Essential for remote work.",
+  "synopsis": "tmux [command] [flags]",
+  "tags": [
+    "shell",
+    "process"
+  ],
+  "examples": [
+    {
+      "command": "tmux",
+      "description": "New session"
+    },
+    {
+      "command": "tmux new -s work",
+      "description": "Named session"
+    },
+    {
+      "command": "tmux ls",
+      "description": "List sessions"
+    },
+    {
+      "command": "tmux attach -t work",
+      "description": "Reattach"
+    },
+    {
+      "command": "tmux kill-session -t work",
+      "description": "Kill session"
+    }
+  ],
+  "options": [],
+  "related": [
+    "screen",
+    "nohup",
+    "byobu"
+  ],
+  "notes": "Default prefix is Ctrl-b. Then: c new window, \" split horiz, % split vert, d detach, arrow switch panes."
+}

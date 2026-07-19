@@ -1,0 +1,37 @@
+{
+  "name": "tee",
+  "description": "Duplicate a pipeline stream to one or more files while still passing it on.",
+  "synopsis": "tee [OPTION]... [FILE]...",
+  "tags": [
+    "text",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "command | tee out.txt",
+      "description": "Save output and still see it"
+    },
+    {
+      "command": "command | tee -a log.txt",
+      "description": "Append to log"
+    },
+    {
+      "command": "echo hi | tee a.txt b.txt",
+      "description": "Write to multiple files"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-a",
+      "description": "Append instead of overwrite"
+    },
+    {
+      "flag": "-i",
+      "description": "Ignore interrupts"
+    }
+  ],
+  "related": [
+    "cat",
+    "script"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "grep",
+  "description": "Search input or files for lines matching a regex. Fundamental for logs and code.",
+  "synopsis": "grep [OPTION]... PATTERN [FILE]...\ngrep [OPTION]... -e PATTERN ... [FILE]...",
+  "tags": [
+    "text",
+    "search"
+  ],
+  "examples": [
+    {
+      "command": "grep error app.log",
+      "description": "Lines containing error"
+    },
+    {
+      "command": "grep -i error app.log",
+      "description": "Case-insensitive"
+    },
+    {
+      "command": "grep -R --include='*.py' TODO .",
+      "description": "Recursive in Python files"
+    },
+    {
+      "command": "grep -n pattern file",
+      "description": "Show line numbers"
+    },
+    {
+      "command": "ps aux | grep nginx",
+      "description": "Filter process list"
+    },
+    {
+      "command": "grep -v '^#' config",
+      "description": "Exclude comment lines"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Ignore case"
+    },
+    {
+      "flag": "-n",
+      "description": "Line numbers"
+    },
+    {
+      "flag": "-r/-R",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-v",
+      "description": "Invert match"
+    },
+    {
+      "flag": "-E",
+      "description": "Extended regex (egrep)"
+    },
+    {
+      "flag": "-F",
+      "description": "Fixed strings (fgrep)"
+    },
+    {
+      "flag": "-c",
+      "description": "Count matching lines"
+    },
+    {
+      "flag": "-l",
+      "description": "Only filenames with matches"
+    },
+    {
+      "flag": "-A/-B/-C N",
+      "description": "Context lines after/before/both"
+    }
+  ],
+  "related": [
+    "rg",
+    "awk",
+    "sed",
+    "find",
+    "journalctl"
+  ]
+}

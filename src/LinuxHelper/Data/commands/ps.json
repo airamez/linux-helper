@@ -1,0 +1,68 @@
+{
+  "name": "ps",
+  "description": "List running processes. Common forms: ps aux (BSD) and ps -ef (System V).",
+  "synopsis": "ps [OPTION]...",
+  "tags": [
+    "process",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "ps aux",
+      "description": "All processes with details (BSD style)"
+    },
+    {
+      "command": "ps -ef",
+      "description": "All processes (System V style)"
+    },
+    {
+      "command": "ps -u $USER",
+      "description": "Your processes"
+    },
+    {
+      "command": "ps aux | grep nginx",
+      "description": "Find nginx processes"
+    },
+    {
+      "command": "ps -p 1234 -o pid,cmd,%mem",
+      "description": "Custom columns for a PID"
+    }
+  ],
+  "options": [
+    {
+      "flag": "a",
+      "description": "All users' processes with tty (BSD)"
+    },
+    {
+      "flag": "u",
+      "description": "User-oriented format (BSD)"
+    },
+    {
+      "flag": "x",
+      "description": "Processes without controlling tty (BSD)"
+    },
+    {
+      "flag": "-e",
+      "description": "Every process"
+    },
+    {
+      "flag": "-f",
+      "description": "Full format"
+    },
+    {
+      "flag": "-p PID",
+      "description": "Select by PID"
+    },
+    {
+      "flag": "-o FMT",
+      "description": "User-defined format"
+    }
+  ],
+  "related": [
+    "top",
+    "htop",
+    "kill",
+    "pgrep",
+    "systemctl"
+  ]
+}

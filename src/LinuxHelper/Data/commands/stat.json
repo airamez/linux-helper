@@ -1,0 +1,47 @@
+{
+  "name": "stat",
+  "description": "Show detailed metadata: size, permissions, inode, timestamps, filesystem info.",
+  "synopsis": "stat [OPTION]... FILE...",
+  "tags": [
+    "files",
+    "disk"
+  ],
+  "examples": [
+    {
+      "command": "stat file.txt",
+      "description": "Full status of a file"
+    },
+    {
+      "command": "stat -c '%n %s %A' *",
+      "description": "Custom format: name size perms"
+    },
+    {
+      "command": "stat -f /",
+      "description": "Filesystem status for /"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c FORMAT",
+      "description": "Custom output format (GNU)"
+    },
+    {
+      "flag": "-f",
+      "description": "Filesystem status instead of file"
+    },
+    {
+      "flag": "-L",
+      "description": "Follow symlinks"
+    },
+    {
+      "flag": "-t",
+      "description": "Terse form"
+    }
+  ],
+  "related": [
+    "ls",
+    "df",
+    "du",
+    "file"
+  ]
+}

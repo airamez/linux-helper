@@ -1,0 +1,52 @@
+{
+  "name": "chown",
+  "description": "Change the user and/or group ownership of files. Usually requires root.",
+  "synopsis": "chown [OPTION]... [OWNER][:[GROUP]] FILE...",
+  "tags": [
+    "files",
+    "permissions",
+    "user"
+  ],
+  "examples": [
+    {
+      "command": "sudo chown alice file.txt",
+      "description": "Change owner"
+    },
+    {
+      "command": "sudo chown alice:devs file.txt",
+      "description": "Owner and group"
+    },
+    {
+      "command": "sudo chown -R www-data:www-data /var/www",
+      "description": "Recursive for web root"
+    },
+    {
+      "command": "sudo chown :staff file",
+      "description": "Change group only"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-R",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-h",
+      "description": "Affect symlinks instead of referenced file"
+    },
+    {
+      "flag": "--reference=RFILE",
+      "description": "Copy ownership from RFILE"
+    }
+  ],
+  "related": [
+    "chmod",
+    "chgrp",
+    "ls",
+    "id"
+  ]
+}

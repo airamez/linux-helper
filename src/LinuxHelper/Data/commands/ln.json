@@ -1,0 +1,50 @@
+{
+  "name": "ln",
+  "description": "Create hard links or symbolic links (shortcuts) to files or directories.",
+  "synopsis": "ln [OPTION]... TARGET LINK_NAME\nln [OPTION]... TARGET... DIRECTORY",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "ln -s /usr/bin/python3 py",
+      "description": "Symbolic link"
+    },
+    {
+      "command": "ln -s ../config.json .",
+      "description": "Relative symlink"
+    },
+    {
+      "command": "ln file.txt hardlink",
+      "description": "Hard link (same inode)"
+    },
+    {
+      "command": "ln -sf /new/path link",
+      "description": "Force replace existing symlink"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-s",
+      "description": "Make symbolic links instead of hard links"
+    },
+    {
+      "flag": "-f",
+      "description": "Force; remove existing destination"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-r",
+      "description": "Create symlinks relative to link location (GNU)"
+    }
+  ],
+  "related": [
+    "readlink",
+    "ls",
+    "cp"
+  ],
+  "notes": "Hard links cannot span filesystems or point at directories (normally). Prefer -s for most uses."
+}

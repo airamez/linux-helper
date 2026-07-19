@@ -1,0 +1,82 @@
+{
+  "name": "systemctl",
+  "description": "Manage services, targets, and unit state on systemd-based distros (most modern Linux).",
+  "synopsis": "systemctl [OPTIONS...] COMMAND [UNIT...]",
+  "tags": [
+    "process",
+    "system",
+    "service"
+  ],
+  "examples": [
+    {
+      "command": "systemctl status nginx",
+      "description": "Service status"
+    },
+    {
+      "command": "sudo systemctl start nginx",
+      "description": "Start service"
+    },
+    {
+      "command": "sudo systemctl stop nginx",
+      "description": "Stop service"
+    },
+    {
+      "command": "sudo systemctl restart nginx",
+      "description": "Restart"
+    },
+    {
+      "command": "sudo systemctl enable nginx",
+      "description": "Start at boot"
+    },
+    {
+      "command": "sudo systemctl disable nginx",
+      "description": "Don't start at boot"
+    },
+    {
+      "command": "systemctl list-units --type=service --state=running",
+      "description": "Running services"
+    },
+    {
+      "command": "journalctl -u nginx -f",
+      "description": "Follow service logs (related)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "status",
+      "description": "Show runtime status"
+    },
+    {
+      "flag": "start/stop/restart",
+      "description": "Control service lifecycle"
+    },
+    {
+      "flag": "enable/disable",
+      "description": "Boot persistence"
+    },
+    {
+      "flag": "reload",
+      "description": "Reload config if supported"
+    },
+    {
+      "flag": "daemon-reload",
+      "description": "Reload unit files after changes"
+    },
+    {
+      "flag": "--user",
+      "description": "User session manager"
+    },
+    {
+      "flag": "--failed",
+      "description": "List failed units"
+    }
+  ],
+  "related": [
+    "journalctl",
+    "service",
+    "ps"
+  ],
+  "distroNotes": {
+    "alpine": "Alpine often uses OpenRC (rc-service) instead of systemd."
+  }
+}

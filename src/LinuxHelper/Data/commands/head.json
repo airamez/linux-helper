@@ -1,0 +1,42 @@
+{
+  "name": "head",
+  "description": "Print the first N lines (default 10) of each file.",
+  "synopsis": "head [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "head file.txt",
+      "description": "First 10 lines"
+    },
+    {
+      "command": "head -n 20 file.txt",
+      "description": "First 20 lines"
+    },
+    {
+      "command": "head -n 5 *.log",
+      "description": "First 5 lines of each matching file"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n N, -N",
+      "description": "Print first N lines"
+    },
+    {
+      "flag": "-c N",
+      "description": "Print first N bytes"
+    },
+    {
+      "flag": "-q",
+      "description": "Never print headers with multiple files"
+    }
+  ],
+  "related": [
+    "tail",
+    "cat",
+    "less"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "lsblk",
+  "description": "List block devices (disks and partitions) as a tree, with sizes and mount points. Best first look at storage layout.",
+  "synopsis": "lsblk [OPTION]... [DEVICE]...",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "lsblk",
+      "description": "Tree of disks and partitions"
+    },
+    {
+      "command": "lsblk -f",
+      "description": "Filesystem type, UUID, and labels"
+    },
+    {
+      "command": "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT",
+      "description": "Common columns for inventory"
+    },
+    {
+      "command": "lsblk -p",
+      "description": "Full device paths (/dev/sda1)"
+    },
+    {
+      "command": "lsblk -a",
+      "description": "Include empty devices"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-f",
+      "description": "Filesystem info (type, label, UUID)"
+    },
+    {
+      "flag": "-a",
+      "description": "All devices"
+    },
+    {
+      "flag": "-b",
+      "description": "Bytes instead of human sizes"
+    },
+    {
+      "flag": "-o LIST",
+      "description": "Output columns"
+    },
+    {
+      "flag": "-p",
+      "description": "Full device paths"
+    },
+    {
+      "flag": "-t",
+      "description": "Topology info"
+    }
+  ],
+  "related": [
+    "df",
+    "fdisk",
+    "blkid",
+    "findmnt",
+    "mount"
+  ]
+}

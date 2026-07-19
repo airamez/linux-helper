@@ -1,0 +1,48 @@
+{
+  "name": "nano",
+  "description": "Beginner-friendly editor. Shortcuts shown at the bottom (^ means Ctrl).",
+  "synopsis": "nano [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "nano file.txt",
+      "description": "Edit a file"
+    },
+    {
+      "command": "nano +10 file.txt",
+      "description": "Open at line 10"
+    }
+  ],
+  "options": [
+    {
+      "flag": "Ctrl+O",
+      "description": "Save (Write Out)"
+    },
+    {
+      "flag": "Ctrl+X",
+      "description": "Exit"
+    },
+    {
+      "flag": "Ctrl+W",
+      "description": "Search"
+    },
+    {
+      "flag": "Ctrl+K",
+      "description": "Cut line"
+    },
+    {
+      "flag": "Ctrl+U",
+      "description": "Paste"
+    }
+  ],
+  "related": [
+    "vim",
+    "vi",
+    "emacs",
+    "micro"
+  ]
+}

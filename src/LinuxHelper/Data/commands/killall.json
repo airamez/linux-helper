@@ -1,0 +1,45 @@
+{
+  "name": "killall",
+  "description": "Send a signal to all processes matching a name.",
+  "synopsis": "killall [OPTION]... name...",
+  "tags": [
+    "process"
+  ],
+  "examples": [
+    {
+      "command": "killall firefox",
+      "description": "Terminate all firefox processes"
+    },
+    {
+      "command": "killall -9 hung-app",
+      "description": "Force kill by name"
+    },
+    {
+      "command": "killall -i python",
+      "description": "Interactive confirm"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-9",
+      "description": "SIGKILL"
+    },
+    {
+      "flag": "-i",
+      "description": "Interactive"
+    },
+    {
+      "flag": "-u USER",
+      "description": "Only USER's processes"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    }
+  ],
+  "related": [
+    "kill",
+    "pkill",
+    "pgrep"
+  ]
+}

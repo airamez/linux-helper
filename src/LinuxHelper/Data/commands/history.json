@@ -1,0 +1,36 @@
+{
+  "name": "history",
+  "description": "Show previously entered commands (bash/zsh). Useful with !n and Ctrl-R.",
+  "synopsis": "history [OPTION]... [n]",
+  "tags": [
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "history",
+      "description": "List history"
+    },
+    {
+      "command": "history 20",
+      "description": "Last 20 entries"
+    },
+    {
+      "command": "history -c",
+      "description": "Clear history (session)"
+    },
+    {
+      "command": "!42",
+      "description": "Re-run history event 42 (bash)"
+    },
+    {
+      "command": "Ctrl-R",
+      "description": "Incremental reverse search (readline)"
+    }
+  ],
+  "options": [],
+  "related": [
+    "alias",
+    "which"
+  ],
+  "notes": "History file is often ~/.bash_history or ~/.zsh_history."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "userdel",
+  "description": "Remove a user account from the system.",
+  "synopsis": "userdel [OPTIONS] LOGIN",
+  "tags": [
+    "user",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "sudo userdel alice",
+      "description": "Remove user (keep home)"
+    },
+    {
+      "command": "sudo userdel -r alice",
+      "description": "Remove user and home directory"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-r",
+      "description": "Remove home directory and mail spool"
+    },
+    {
+      "flag": "-f",
+      "description": "Force removal even if logged in"
+    }
+  ],
+  "related": [
+    "useradd",
+    "usermod",
+    "passwd"
+  ]
+}

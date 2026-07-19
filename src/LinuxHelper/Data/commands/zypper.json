@@ -1,0 +1,61 @@
+{
+  "name": "zypper",
+  "description": "openSUSE / SUSE package manager for RPM packages.",
+  "synopsis": "zypper [--global-opts] <command> [--command-opts] [args]",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo zypper refresh",
+      "description": "Refresh repos"
+    },
+    {
+      "command": "sudo zypper update",
+      "description": "Update packages"
+    },
+    {
+      "command": "sudo zypper install nginx",
+      "description": "Install"
+    },
+    {
+      "command": "sudo zypper remove nginx",
+      "description": "Remove"
+    },
+    {
+      "command": "zypper search keyword",
+      "description": "Search"
+    },
+    {
+      "command": "zypper info nginx",
+      "description": "Info"
+    }
+  ],
+  "options": [
+    {
+      "flag": "refresh",
+      "description": "Refresh metadata"
+    },
+    {
+      "flag": "update / dup",
+      "description": "Update / dist-upgrade"
+    },
+    {
+      "flag": "install / remove",
+      "description": "Lifecycle"
+    },
+    {
+      "flag": "search / info",
+      "description": "Discovery"
+    }
+  ],
+  "related": [
+    "rpm"
+  ],
+  "distroVariants": {
+    "ubuntu": "Use: sudo apt install <pkg>",
+    "fedora": "Use: sudo dnf install <pkg>",
+    "arch": "Use: sudo pacman -S <pkg>",
+    "alpine": "Use: sudo apk add <pkg>"
+  }
+}

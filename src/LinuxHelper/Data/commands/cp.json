@@ -1,0 +1,57 @@
+{
+  "name": "cp",
+  "description": "Copy files or recursively copy directories.",
+  "synopsis": "cp [OPTION]... SOURCE DEST\ncp [OPTION]... SOURCE... DIRECTORY",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "cp a.txt b.txt",
+      "description": "Copy a file"
+    },
+    {
+      "command": "cp -r src/ backup/",
+      "description": "Copy a directory tree"
+    },
+    {
+      "command": "cp -a project/ project.bak/",
+      "description": "Archive mode: preserve attributes, recursive"
+    },
+    {
+      "command": "cp -u *.c dest/",
+      "description": "Copy only when source is newer"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-r, -R",
+      "description": "Copy directories recursively"
+    },
+    {
+      "flag": "-a",
+      "description": "Archive mode (-dR --preserve=all)"
+    },
+    {
+      "flag": "-i",
+      "description": "Prompt before overwrite"
+    },
+    {
+      "flag": "-u",
+      "description": "Copy only when source is newer than dest"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-p",
+      "description": "Preserve mode, ownership, timestamps"
+    }
+  ],
+  "related": [
+    "mv",
+    "rsync",
+    "scp"
+  ]
+}

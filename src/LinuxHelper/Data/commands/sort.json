@@ -1,0 +1,61 @@
+{
+  "name": "sort",
+  "description": "Sort lines alphabetically or numerically; can merge and unique.",
+  "synopsis": "sort [OPTION]... [FILE]...",
+  "tags": [
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "sort file.txt",
+      "description": "Alphabetical sort"
+    },
+    {
+      "command": "sort -n numbers.txt",
+      "description": "Numeric sort"
+    },
+    {
+      "command": "sort -k2 file",
+      "description": "Sort by second field"
+    },
+    {
+      "command": "sort -u file",
+      "description": "Unique lines only"
+    },
+    {
+      "command": "du -h | sort -h",
+      "description": "Human-numeric size sort"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n",
+      "description": "Numeric sort"
+    },
+    {
+      "flag": "-r",
+      "description": "Reverse"
+    },
+    {
+      "flag": "-k N",
+      "description": "Sort key field N"
+    },
+    {
+      "flag": "-u",
+      "description": "Unique"
+    },
+    {
+      "flag": "-h",
+      "description": "Human numeric (2K 1G)"
+    },
+    {
+      "flag": "-t CHAR",
+      "description": "Field separator"
+    }
+  ],
+  "related": [
+    "uniq",
+    "awk",
+    "cut"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "date",
+  "description": "Display current time in many formats; setting the clock needs root (prefer timedatectl).",
+  "synopsis": "date [OPTION]... [+FORMAT]",
+  "tags": [
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "date",
+      "description": "Current date/time"
+    },
+    {
+      "command": "date -u",
+      "description": "UTC"
+    },
+    {
+      "command": "date '+%Y-%m-%d %H:%M:%S'",
+      "description": "Custom format"
+    },
+    {
+      "command": "date -d 'next Monday'",
+      "description": "Parse a date string (GNU)"
+    },
+    {
+      "command": "date -d @1700000000",
+      "description": "From epoch seconds"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u",
+      "description": "UTC"
+    },
+    {
+      "flag": "-d STRING",
+      "description": "Display time described by STRING (GNU)"
+    },
+    {
+      "flag": "-s STRING",
+      "description": "Set time (root)"
+    },
+    {
+      "flag": "+FORMAT",
+      "description": "Output format"
+    }
+  ],
+  "related": [
+    "timedatectl",
+    "hwclock",
+    "cal"
+  ]
+}

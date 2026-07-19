@@ -1,0 +1,59 @@
+{
+  "name": "useradd",
+  "description": "Low-level user creation. Many distros recommend adduser (friendlier) on Debian/Ubuntu.",
+  "synopsis": "useradd [OPTIONS] LOGIN",
+  "tags": [
+    "user",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "sudo useradd -m -s /bin/bash alice",
+      "description": "Create user with home and bash"
+    },
+    {
+      "command": "sudo passwd alice",
+      "description": "Set password (follow-up)"
+    },
+    {
+      "command": "sudo useradd -m -G sudo,docker alice",
+      "description": "With supplementary groups"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-m",
+      "description": "Create home directory"
+    },
+    {
+      "flag": "-s SHELL",
+      "description": "Login shell"
+    },
+    {
+      "flag": "-G GROUPS",
+      "description": "Supplementary groups"
+    },
+    {
+      "flag": "-u UID",
+      "description": "Specify UID"
+    },
+    {
+      "flag": "-d HOME",
+      "description": "Home directory path"
+    },
+    {
+      "flag": "-c COMMENT",
+      "description": "GECOS field"
+    }
+  ],
+  "related": [
+    "userdel",
+    "usermod",
+    "passwd",
+    "adduser"
+  ],
+  "distroNotes": {
+    "ubuntu": "Prefer: sudo adduser alice (interactive, sets up home/password).",
+    "debian": "Prefer: sudo adduser alice."
+  }
+}

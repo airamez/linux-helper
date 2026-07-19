@@ -1,0 +1,56 @@
+{
+  "name": "gzip",
+  "description": "Compress files with gzip (replaces original with .gz by default).",
+  "synopsis": "gzip [OPTION]... [FILE]...",
+  "tags": [
+    "archive",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "gzip file.txt",
+      "description": "Compress \u2192 file.txt.gz"
+    },
+    {
+      "command": "gzip -k file.txt",
+      "description": "Keep original (GNU)"
+    },
+    {
+      "command": "gzip -d file.txt.gz",
+      "description": "Decompress"
+    },
+    {
+      "command": "gzip -9 big.dat",
+      "description": "Best compression"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-d",
+      "description": "Decompress"
+    },
+    {
+      "flag": "-k",
+      "description": "Keep original"
+    },
+    {
+      "flag": "-c",
+      "description": "Write to stdout"
+    },
+    {
+      "flag": "-1 .. -9",
+      "description": "Compression level"
+    },
+    {
+      "flag": "-t",
+      "description": "Test integrity"
+    }
+  ],
+  "related": [
+    "gunzip",
+    "tar",
+    "zcat",
+    "bzip2",
+    "xz"
+  ]
+}

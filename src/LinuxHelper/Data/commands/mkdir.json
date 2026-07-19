@@ -1,0 +1,43 @@
+{
+  "name": "mkdir",
+  "description": "Create one or more directories.",
+  "synopsis": "mkdir [OPTION]... DIRECTORY...",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "mkdir docs",
+      "description": "Create a single directory"
+    },
+    {
+      "command": "mkdir -p a/b/c",
+      "description": "Create nested directories as needed"
+    },
+    {
+      "command": "mkdir -m 755 public",
+      "description": "Create with specific permissions"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-p",
+      "description": "Create parent directories; no error if exists"
+    },
+    {
+      "flag": "-m MODE",
+      "description": "Set permission mode"
+    },
+    {
+      "flag": "-v",
+      "description": "Print a message for each created directory"
+    }
+  ],
+  "related": [
+    "rmdir",
+    "rm",
+    "touch",
+    "chmod"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "locate",
+  "description": "Fast filename search via a prebuilt database (mlocate/plocate). Update DB with updatedb (often via cron).",
+  "synopsis": "locate [OPTION]... PATTERN...",
+  "tags": [
+    "files",
+    "search"
+  ],
+  "examples": [
+    {
+      "command": "locate passwd",
+      "description": "Find paths containing passwd"
+    },
+    {
+      "command": "locate -i readme",
+      "description": "Case-insensitive"
+    },
+    {
+      "command": "locate -n 20 '*.conf'",
+      "description": "Limit results"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Case-insensitive"
+    },
+    {
+      "flag": "-n N",
+      "description": "Limit to N results"
+    },
+    {
+      "flag": "-e",
+      "description": "Only show existing files"
+    },
+    {
+      "flag": "-r",
+      "description": "Basic regex"
+    }
+  ],
+  "related": [
+    "find",
+    "updatedb",
+    "which"
+  ],
+  "notes": "Database may be stale; run sudo updatedb if results look wrong."
+}

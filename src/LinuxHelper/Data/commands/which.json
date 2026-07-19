@@ -1,0 +1,32 @@
+{
+  "name": "which",
+  "description": "Print the path of executables that would run for a given name (searches PATH).",
+  "synopsis": "which [OPTION]... COMMAND...",
+  "tags": [
+    "shell",
+    "search"
+  ],
+  "examples": [
+    {
+      "command": "which python3",
+      "description": "Where is python3?"
+    },
+    {
+      "command": "which -a python",
+      "description": "All matches on PATH"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-a",
+      "description": "All matching pathnames"
+    }
+  ],
+  "related": [
+    "type",
+    "whereis",
+    "command",
+    "locate"
+  ],
+  "notes": "In bash, 'type -a name' is often more accurate (includes builtins/aliases)."
+}

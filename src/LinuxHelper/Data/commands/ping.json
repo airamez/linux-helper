@@ -1,0 +1,46 @@
+{
+  "name": "ping",
+  "description": "Test reachability and measure round-trip time to a host.",
+  "synopsis": "ping [OPTION]... HOST",
+  "tags": [
+    "network"
+  ],
+  "examples": [
+    {
+      "command": "ping 8.8.8.8",
+      "description": "Ping Google DNS"
+    },
+    {
+      "command": "ping -c 4 example.com",
+      "description": "Exactly 4 probes"
+    },
+    {
+      "command": "ping -i 0.5 host",
+      "description": "Interval 0.5s"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c N",
+      "description": "Stop after N replies"
+    },
+    {
+      "flag": "-i SEC",
+      "description": "Interval between packets"
+    },
+    {
+      "flag": "-W SEC",
+      "description": "Timeout waiting for reply"
+    },
+    {
+      "flag": "-4 / -6",
+      "description": "Force IPv4 / IPv6"
+    }
+  ],
+  "related": [
+    "traceroute",
+    "mtr",
+    "ip",
+    "curl"
+  ]
+}

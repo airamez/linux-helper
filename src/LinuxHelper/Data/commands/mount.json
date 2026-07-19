@@ -1,0 +1,53 @@
+{
+  "name": "mount",
+  "description": "Attach a filesystem to a directory tree. With no args, list mounts (findmnt is often clearer).",
+  "synopsis": "mount [-t TYPE] [-o OPTIONS] DEVICE DIR\nmount [-l]",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "mount",
+      "description": "List mounted filesystems"
+    },
+    {
+      "command": "sudo mount /dev/sdb1 /mnt",
+      "description": "Mount a partition"
+    },
+    {
+      "command": "sudo mount -o ro /dev/cdrom /media/cd",
+      "description": "Read-only mount"
+    },
+    {
+      "command": "sudo mount -t nfs server:/export /mnt",
+      "description": "NFS mount"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-t TYPE",
+      "description": "Filesystem type"
+    },
+    {
+      "flag": "-o OPTIONS",
+      "description": "Mount options (ro, rw, noexec, ...)"
+    },
+    {
+      "flag": "-a",
+      "description": "Mount all from fstab"
+    },
+    {
+      "flag": "-l",
+      "description": "List with labels"
+    }
+  ],
+  "related": [
+    "umount",
+    "lsblk",
+    "findmnt",
+    "df",
+    "fstab"
+  ],
+  "notes": "Persistent mounts belong in /etc/fstab or systemd .mount units."
+}

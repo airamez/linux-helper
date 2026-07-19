@@ -1,0 +1,76 @@
+{
+  "name": "dnf",
+  "description": "DNF (Dandified YUM) installs, updates, and removes RPM packages on Fedora, RHEL, Rocky, Alma.",
+  "synopsis": "dnf [options] <command> [<args>...]",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo dnf upgrade",
+      "description": "Upgrade packages"
+    },
+    {
+      "command": "sudo dnf install nginx",
+      "description": "Install"
+    },
+    {
+      "command": "sudo dnf remove nginx",
+      "description": "Remove"
+    },
+    {
+      "command": "dnf search keyword",
+      "description": "Search"
+    },
+    {
+      "command": "dnf info nginx",
+      "description": "Package info"
+    },
+    {
+      "command": "dnf provides /usr/bin/ps",
+      "description": "Which package owns a file"
+    },
+    {
+      "command": "sudo dnf autoremove",
+      "description": "Remove unneeded deps"
+    }
+  ],
+  "options": [
+    {
+      "flag": "install / remove",
+      "description": "Lifecycle"
+    },
+    {
+      "flag": "upgrade",
+      "description": "Update packages"
+    },
+    {
+      "flag": "search / info",
+      "description": "Discovery"
+    },
+    {
+      "flag": "provides",
+      "description": "Find package by file"
+    },
+    {
+      "flag": "history",
+      "description": "Transaction history"
+    },
+    {
+      "flag": "repolist",
+      "description": "Enabled repos"
+    }
+  ],
+  "related": [
+    "rpm",
+    "yum"
+  ],
+  "notes": "yum is often a symlink/alias to dnf on modern Fedora/RHEL.",
+  "distroVariants": {
+    "ubuntu": "Use: sudo apt install <pkg>",
+    "debian": "Use: sudo apt install <pkg>",
+    "arch": "Use: sudo pacman -S <pkg>",
+    "opensuse": "Use: sudo zypper install <pkg>",
+    "alpine": "Use: sudo apk add <pkg>"
+  }
+}

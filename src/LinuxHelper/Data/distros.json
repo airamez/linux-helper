@@ -1,0 +1,74 @@
+{
+  "distros": [
+    {
+      "id": "ubuntu",
+      "name": "Ubuntu",
+      "aliases": ["ubuntu", "ub"],
+      "packageManager": "apt",
+      "family": "debian",
+      "update": "sudo apt update && sudo apt upgrade",
+      "install": "sudo apt install <pkg>",
+      "remove": "sudo apt remove <pkg>"
+    },
+    {
+      "id": "debian",
+      "name": "Debian",
+      "aliases": ["debian", "deb"],
+      "packageManager": "apt",
+      "family": "debian",
+      "update": "sudo apt update && sudo apt upgrade",
+      "install": "sudo apt install <pkg>",
+      "remove": "sudo apt remove <pkg>"
+    },
+    {
+      "id": "fedora",
+      "name": "Fedora",
+      "aliases": ["fedora", "fed"],
+      "packageManager": "dnf",
+      "family": "rhel",
+      "update": "sudo dnf upgrade",
+      "install": "sudo dnf install <pkg>",
+      "remove": "sudo dnf remove <pkg>"
+    },
+    {
+      "id": "rhel",
+      "name": "RHEL / Rocky / Alma",
+      "aliases": ["rhel", "redhat", "rh", "centos", "rocky", "alma", "el"],
+      "packageManager": "dnf",
+      "family": "rhel",
+      "update": "sudo dnf upgrade",
+      "install": "sudo dnf install <pkg>",
+      "remove": "sudo dnf remove <pkg>"
+    },
+    {
+      "id": "arch",
+      "name": "Arch / Manjaro",
+      "aliases": ["arch", "archlinux", "manjaro"],
+      "packageManager": "pacman",
+      "family": "arch",
+      "update": "sudo pacman -Syu",
+      "install": "sudo pacman -S <pkg>",
+      "remove": "sudo pacman -Rns <pkg>"
+    },
+    {
+      "id": "opensuse",
+      "name": "openSUSE",
+      "aliases": ["opensuse", "suse", "sles"],
+      "packageManager": "zypper",
+      "family": "suse",
+      "update": "sudo zypper refresh && sudo zypper update",
+      "install": "sudo zypper install <pkg>",
+      "remove": "sudo zypper remove <pkg>"
+    },
+    {
+      "id": "alpine",
+      "name": "Alpine Linux",
+      "aliases": ["alpine", "apk"],
+      "packageManager": "apk",
+      "family": "alpine",
+      "update": "sudo apk update && sudo apk upgrade",
+      "install": "sudo apk add <pkg>",
+      "remove": "sudo apk del <pkg>"
+    }
+  ]
+}

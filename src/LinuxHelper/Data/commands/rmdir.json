@@ -1,0 +1,29 @@
+{
+  "name": "rmdir",
+  "description": "Remove directories that are empty. Use rm -r for non-empty trees.",
+  "synopsis": "rmdir [OPTION]... DIRECTORY...",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "rmdir empty_dir",
+      "description": "Remove an empty directory"
+    },
+    {
+      "command": "rmdir -p a/b/c",
+      "description": "Remove c, then b, then a if each becomes empty"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-p",
+      "description": "Remove DIRECTORY and its empty ancestors"
+    }
+  ],
+  "related": [
+    "rm",
+    "mkdir"
+  ]
+}

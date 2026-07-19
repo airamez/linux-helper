@@ -1,0 +1,51 @@
+{
+  "name": "crontab",
+  "description": "Schedule recurring jobs with cron. Each user has a personal crontab.",
+  "synopsis": "crontab [-u user] file\ncrontab [-u user] [-l | -r | -e]",
+  "tags": [
+    "system",
+    "process"
+  ],
+  "examples": [
+    {
+      "command": "crontab -l",
+      "description": "List your crontab"
+    },
+    {
+      "command": "crontab -e",
+      "description": "Edit your crontab"
+    },
+    {
+      "command": "crontab -r",
+      "description": "Remove your crontab"
+    },
+    {
+      "command": "crontab -l -u alice",
+      "description": "List another user's (root)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "List"
+    },
+    {
+      "flag": "-e",
+      "description": "Edit"
+    },
+    {
+      "flag": "-r",
+      "description": "Remove"
+    },
+    {
+      "flag": "-u USER",
+      "description": "Operate on USER's crontab"
+    }
+  ],
+  "related": [
+    "systemctl",
+    "timer",
+    "at"
+  ],
+  "notes": "Format: min hour dom month dow command. Example: 0 2 * * * /usr/local/bin/backup.sh"
+}

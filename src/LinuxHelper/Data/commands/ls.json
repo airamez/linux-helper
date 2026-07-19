@@ -1,0 +1,77 @@
+{
+  "name": "ls",
+  "description": "List files and directories. One of the most used commands; combine with flags for details, sorting, and hidden files.",
+  "synopsis": "ls [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "directory"
+  ],
+  "examples": [
+    {
+      "command": "ls -lia",
+      "description": "Long listing: all files, inode numbers, human details"
+    },
+    {
+      "command": "ls -la",
+      "description": "Long listing including hidden files"
+    },
+    {
+      "command": "ls -lh",
+      "description": "Human-readable sizes in long format"
+    },
+    {
+      "command": "ls -lt",
+      "description": "Sort by modification time (newest first)"
+    },
+    {
+      "command": "ls -1",
+      "description": "One entry per line"
+    },
+    {
+      "command": "ls /var/log",
+      "description": "List a specific path"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "Long format (permissions, owner, size, date)"
+    },
+    {
+      "flag": "-a",
+      "description": "Show all entries including those starting with ."
+    },
+    {
+      "flag": "-h",
+      "description": "Human-readable sizes (with -l)"
+    },
+    {
+      "flag": "-t",
+      "description": "Sort by modification time"
+    },
+    {
+      "flag": "-r",
+      "description": "Reverse sort order"
+    },
+    {
+      "flag": "-R",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-S",
+      "description": "Sort by file size"
+    },
+    {
+      "flag": "-d",
+      "description": "List directories themselves, not contents"
+    }
+  ],
+  "related": [
+    "cd",
+    "pwd",
+    "find",
+    "tree",
+    "stat",
+    "du"
+  ]
+}

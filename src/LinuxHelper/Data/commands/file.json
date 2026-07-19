@@ -1,0 +1,41 @@
+{
+  "name": "file",
+  "description": "Probe content (magic numbers) to report file type, independent of extension.",
+  "synopsis": "file [OPTION]... FILE...",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "file document.pdf",
+      "description": "Identify a file"
+    },
+    {
+      "command": "file *",
+      "description": "Type of all entries in directory"
+    },
+    {
+      "command": "file -i photo.jpg",
+      "description": "MIME type"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Output MIME type strings"
+    },
+    {
+      "flag": "-b",
+      "description": "Brief (no filename prefix)"
+    },
+    {
+      "flag": "-L",
+      "description": "Follow symlinks"
+    }
+  ],
+  "related": [
+    "stat",
+    "ls",
+    "hexdump"
+  ]
+}

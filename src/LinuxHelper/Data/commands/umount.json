@@ -1,0 +1,44 @@
+{
+  "name": "umount",
+  "description": "Detach a mounted filesystem. Fails if busy (open files/cwd on mount).",
+  "synopsis": "umount [OPTION]... {DIR|DEVICE}...",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "sudo umount /mnt",
+      "description": "Unmount by mount point"
+    },
+    {
+      "command": "sudo umount /dev/sdb1",
+      "description": "Unmount by device"
+    },
+    {
+      "command": "sudo umount -l /mnt",
+      "description": "Lazy unmount when busy"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "Lazy unmount"
+    },
+    {
+      "flag": "-f",
+      "description": "Force (for unreachable NFS)"
+    },
+    {
+      "flag": "-a",
+      "description": "Unmount all from fstab/mtab (careful)"
+    }
+  ],
+  "related": [
+    "mount",
+    "lsof",
+    "fuser",
+    "lsblk",
+    "findmnt"
+  ]
+}

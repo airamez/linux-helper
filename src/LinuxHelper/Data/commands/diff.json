@@ -1,0 +1,59 @@
+{
+  "name": "diff",
+  "description": "Show differences between two files. Basis for patches.",
+  "synopsis": "diff [OPTION]... FILES",
+  "tags": [
+    "text",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "diff a.txt b.txt",
+      "description": "Basic diff"
+    },
+    {
+      "command": "diff -u a.txt b.txt",
+      "description": "Unified diff (common for patches)"
+    },
+    {
+      "command": "diff -r dir1 dir2",
+      "description": "Recursive directory compare"
+    },
+    {
+      "command": "diff -y a b",
+      "description": "Side-by-side"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u",
+      "description": "Unified format"
+    },
+    {
+      "flag": "-c",
+      "description": "Context format"
+    },
+    {
+      "flag": "-r",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-i",
+      "description": "Ignore case"
+    },
+    {
+      "flag": "-w",
+      "description": "Ignore whitespace"
+    },
+    {
+      "flag": "-y",
+      "description": "Side by side"
+    }
+  ],
+  "related": [
+    "vimdiff",
+    "git",
+    "comm",
+    "cmp"
+  ]
+}

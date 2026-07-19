@@ -1,0 +1,53 @@
+{
+  "name": "dmesg",
+  "description": "Kernel messages: hardware, drivers, OOM, boot issues.",
+  "synopsis": "dmesg [OPTION]...",
+  "tags": [
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "dmesg -T",
+      "description": "Human-readable timestamps"
+    },
+    {
+      "command": "dmesg -w",
+      "description": "Follow new messages"
+    },
+    {
+      "command": "dmesg -l err,warn",
+      "description": "Errors and warnings"
+    },
+    {
+      "command": "dmesg | grep -i usb",
+      "description": "Filter USB messages"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-T",
+      "description": "Human timestamps"
+    },
+    {
+      "flag": "-H",
+      "description": "Human-readable pager-friendly"
+    },
+    {
+      "flag": "-w",
+      "description": "Follow"
+    },
+    {
+      "flag": "-l LIST",
+      "description": "Level filter"
+    },
+    {
+      "flag": "-k",
+      "description": "Kernel messages"
+    }
+  ],
+  "related": [
+    "journalctl",
+    "lsusb",
+    "lspci"
+  ]
+}

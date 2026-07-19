@@ -1,0 +1,75 @@
+{
+  "name": "find",
+  "description": "Walk a directory hierarchy and select files by name, type, size, time, permissions, and more. Extremely powerful for admin and scripting.",
+  "synopsis": "find [PATH...] [EXPRESSION]",
+  "tags": [
+    "files",
+    "search"
+  ],
+  "examples": [
+    {
+      "command": "find . -name '*.log'",
+      "description": "Files named *.log under current dir"
+    },
+    {
+      "command": "find /var -type d -name cache",
+      "description": "Directories named cache"
+    },
+    {
+      "command": "find . -type f -size +100M",
+      "description": "Files larger than 100 MiB"
+    },
+    {
+      "command": "find . -mtime -7",
+      "description": "Modified in the last 7 days"
+    },
+    {
+      "command": "find . -name '*.tmp' -delete",
+      "description": "Delete matching files"
+    },
+    {
+      "command": "find . -type f -exec chmod 644 {} +",
+      "description": "Run chmod on matches"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-name PATTERN",
+      "description": "Base name matches shell pattern"
+    },
+    {
+      "flag": "-iname PATTERN",
+      "description": "Case-insensitive -name"
+    },
+    {
+      "flag": "-type f|d|l",
+      "description": "File, directory, or symlink"
+    },
+    {
+      "flag": "-size N",
+      "description": "Size filter (+N larger, -N smaller)"
+    },
+    {
+      "flag": "-mtime N",
+      "description": "Modified N*24 hours ago"
+    },
+    {
+      "flag": "-maxdepth N",
+      "description": "Descend at most N levels"
+    },
+    {
+      "flag": "-exec CMD {} +",
+      "description": "Run command on matches"
+    },
+    {
+      "flag": "-delete",
+      "description": "Delete matches (GNU find)"
+    }
+  ],
+  "related": [
+    "locate",
+    "grep",
+    "fd",
+    "ls"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "scp",
+  "description": "Copy files between hosts using SSH.",
+  "synopsis": "scp [OPTION]... SOURCE... DEST",
+  "tags": [
+    "network",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "scp file.txt user@host:/tmp/",
+      "description": "Local \u2192 remote"
+    },
+    {
+      "command": "scp user@host:/var/log/app.log .",
+      "description": "Remote \u2192 local"
+    },
+    {
+      "command": "scp -r project/ user@host:~/project",
+      "description": "Recursive directory"
+    },
+    {
+      "command": "scp -P 2222 file user@host:",
+      "description": "Custom SSH port (capital P)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-r",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-P PORT",
+      "description": "SSH port"
+    },
+    {
+      "flag": "-i KEY",
+      "description": "Identity file"
+    },
+    {
+      "flag": "-C",
+      "description": "Compression"
+    },
+    {
+      "flag": "-p",
+      "description": "Preserve times"
+    }
+  ],
+  "related": [
+    "rsync",
+    "sftp",
+    "ssh",
+    "cp"
+  ],
+  "notes": "For sync/resume/large trees, rsync over SSH is usually better than scp."
+}

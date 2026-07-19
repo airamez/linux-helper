@@ -1,0 +1,58 @@
+{
+  "name": "xargs",
+  "description": "Convert stdin items into arguments for another command. Pairs well with find.",
+  "synopsis": "xargs [OPTION]... COMMAND [INITIAL-ARGS]...",
+  "tags": [
+    "shell",
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "find . -name '*.log' | xargs rm",
+      "description": "Delete found files"
+    },
+    {
+      "command": "find . -name '*.c' | xargs grep -n TODO",
+      "description": "Grep many files"
+    },
+    {
+      "command": "echo 'a b c' | xargs -n 1 echo",
+      "description": "One arg per command"
+    },
+    {
+      "command": "cat urls.txt | xargs -n 1 curl -O",
+      "description": "Download each URL"
+    },
+    {
+      "command": "find . -print0 | xargs -0 rm",
+      "description": "Safe for spaces/newlines"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n N",
+      "description": "Max args per command"
+    },
+    {
+      "flag": "-0",
+      "description": "NUL-separated input"
+    },
+    {
+      "flag": "-P N",
+      "description": "Parallel up to N processes"
+    },
+    {
+      "flag": "-I {}",
+      "description": "Replace string with input"
+    },
+    {
+      "flag": "-p",
+      "description": "Prompt before execution"
+    }
+  ],
+  "related": [
+    "find",
+    "parallel",
+    "grep"
+  ]
+}

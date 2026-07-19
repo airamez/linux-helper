@@ -1,0 +1,67 @@
+{
+  "name": "rsync",
+  "description": "Efficient copy/sync locally or over SSH. Only transfers differences.",
+  "synopsis": "rsync [OPTION]... SRC... [DEST]",
+  "tags": [
+    "network",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "rsync -av src/ dest/",
+      "description": "Archive verbose local sync"
+    },
+    {
+      "command": "rsync -avz ./ user@host:backup/",
+      "description": "To remote with compression"
+    },
+    {
+      "command": "rsync -av --delete src/ dest/",
+      "description": "Make dest mirror src"
+    },
+    {
+      "command": "rsync -avn src/ dest/",
+      "description": "Dry run"
+    },
+    {
+      "command": "rsync -av --progress big/ user@host:big/",
+      "description": "Show progress"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-a",
+      "description": "Archive (recursive, preserve meta)"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-z",
+      "description": "Compress in transit"
+    },
+    {
+      "flag": "-n",
+      "description": "Dry run"
+    },
+    {
+      "flag": "--delete",
+      "description": "Delete extraneous files on dest"
+    },
+    {
+      "flag": "-P",
+      "description": "Progress + partial"
+    },
+    {
+      "flag": "-e ssh",
+      "description": "Use SSH (default for remote)"
+    }
+  ],
+  "related": [
+    "scp",
+    "cp",
+    "rclone"
+  ],
+  "notes": "Trailing slash on src matters: src/ copies contents; src copies the directory."
+}

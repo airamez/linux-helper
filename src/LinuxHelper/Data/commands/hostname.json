@@ -1,0 +1,46 @@
+{
+  "name": "hostname",
+  "description": "Print the hostname; with privileges can set it (prefer hostnamectl on systemd).",
+  "synopsis": "hostname [OPTION]... [NAME]",
+  "tags": [
+    "network",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "hostname",
+      "description": "Print hostname"
+    },
+    {
+      "command": "hostname -f",
+      "description": "FQDN if configured"
+    },
+    {
+      "command": "hostname -I",
+      "description": "All IP addresses"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-f",
+      "description": "FQDN"
+    },
+    {
+      "flag": "-i",
+      "description": "Addresses for host name"
+    },
+    {
+      "flag": "-I",
+      "description": "All addresses"
+    },
+    {
+      "flag": "-s",
+      "description": "Short name"
+    }
+  ],
+  "related": [
+    "hostnamectl",
+    "ip",
+    "dnsdomainname"
+  ]
+}

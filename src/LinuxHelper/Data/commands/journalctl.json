@@ -1,0 +1,71 @@
+{
+  "name": "journalctl",
+  "description": "Read logs collected by systemd-journald.",
+  "synopsis": "journalctl [OPTIONS...] [MATCHES...]",
+  "tags": [
+    "system",
+    "text",
+    "service"
+  ],
+  "examples": [
+    {
+      "command": "journalctl -xe",
+      "description": "Recent logs with explanations"
+    },
+    {
+      "command": "journalctl -u ssh -f",
+      "description": "Follow SSH service logs"
+    },
+    {
+      "command": "journalctl -b",
+      "description": "Current boot only"
+    },
+    {
+      "command": "journalctl --since '1 hour ago'",
+      "description": "Time filter"
+    },
+    {
+      "command": "journalctl -p err",
+      "description": "Priority error and above"
+    },
+    {
+      "command": "journalctl -n 100",
+      "description": "Last 100 entries"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u UNIT",
+      "description": "Unit/service filter"
+    },
+    {
+      "flag": "-f",
+      "description": "Follow"
+    },
+    {
+      "flag": "-b",
+      "description": "Current boot"
+    },
+    {
+      "flag": "-n N",
+      "description": "Last N lines"
+    },
+    {
+      "flag": "-p PRI",
+      "description": "Priority threshold"
+    },
+    {
+      "flag": "--since/--until",
+      "description": "Time range"
+    },
+    {
+      "flag": "-xe",
+      "description": "End of journal + catalog explanations"
+    }
+  ],
+  "related": [
+    "systemctl",
+    "dmesg",
+    "tail"
+  ]
+}

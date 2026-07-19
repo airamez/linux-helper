@@ -1,0 +1,27 @@
+{
+  "name": "source",
+  "description": "Read and execute a file in the current shell (not a subshell). Also written as '.' .",
+  "synopsis": "source filename [arguments]\n. filename [arguments]",
+  "tags": [
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "source ~/.bashrc",
+      "description": "Reload bash config"
+    },
+    {
+      "command": ". ./venv/bin/activate",
+      "description": "Activate Python venv"
+    },
+    {
+      "command": "source env.sh",
+      "description": "Load environment variables"
+    }
+  ],
+  "options": [],
+  "related": [
+    "export",
+    "bash"
+  ]
+}

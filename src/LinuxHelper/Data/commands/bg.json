@@ -1,0 +1,26 @@
+{
+  "name": "bg",
+  "description": "Continue a stopped job in the background.",
+  "synopsis": "bg [jobspec ...]",
+  "tags": [
+    "process",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "bg",
+      "description": "Resume most recent stopped job in background"
+    },
+    {
+      "command": "bg %1",
+      "description": "Resume job 1 in background"
+    }
+  ],
+  "options": [],
+  "related": [
+    "fg",
+    "jobs",
+    "Ctrl-Z"
+  ],
+  "notes": "Stop a foreground process with Ctrl-Z, then bg to keep it running."
+}

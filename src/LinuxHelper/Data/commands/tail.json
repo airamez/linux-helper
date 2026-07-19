@@ -1,0 +1,50 @@
+{
+  "name": "tail",
+  "description": "Print the last N lines (default 10). -f follows a growing file (classic for logs).",
+  "synopsis": "tail [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "tail file.txt",
+      "description": "Last 10 lines"
+    },
+    {
+      "command": "tail -n 50 file.txt",
+      "description": "Last 50 lines"
+    },
+    {
+      "command": "tail -f /var/log/syslog",
+      "description": "Follow log in real time"
+    },
+    {
+      "command": "tail -n +20 file",
+      "description": "From line 20 to end"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n N",
+      "description": "Last N lines"
+    },
+    {
+      "flag": "-f",
+      "description": "Follow appended data"
+    },
+    {
+      "flag": "-F",
+      "description": "Follow and retry if recreated"
+    },
+    {
+      "flag": "-c N",
+      "description": "Last N bytes"
+    }
+  ],
+  "related": [
+    "head",
+    "less",
+    "journalctl"
+  ]
+}

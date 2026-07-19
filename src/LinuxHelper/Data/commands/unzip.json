@@ -1,0 +1,54 @@
+{
+  "name": "unzip",
+  "description": "Extract or list ZIP archives.",
+  "synopsis": "unzip [OPTION]... file.zip [file...]",
+  "tags": [
+    "archive",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "unzip archive.zip",
+      "description": "Extract here"
+    },
+    {
+      "command": "unzip archive.zip -d /target",
+      "description": "Extract to directory"
+    },
+    {
+      "command": "unzip -l archive.zip",
+      "description": "List contents"
+    },
+    {
+      "command": "unzip -o archive.zip",
+      "description": "Overwrite without prompting"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "List"
+    },
+    {
+      "flag": "-d DIR",
+      "description": "Extract into DIR"
+    },
+    {
+      "flag": "-o",
+      "description": "Overwrite"
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet"
+    },
+    {
+      "flag": "-t",
+      "description": "Test"
+    }
+  ],
+  "related": [
+    "zip",
+    "tar",
+    "7z"
+  ]
+}

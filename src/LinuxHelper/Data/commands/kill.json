@@ -1,0 +1,56 @@
+{
+  "name": "kill",
+  "description": "Send signals (default TERM) to PIDs. Use kill -9 only when graceful stop fails.",
+  "synopsis": "kill [OPTION]... PID...\nkill -SIGNAL PID...",
+  "tags": [
+    "process"
+  ],
+  "examples": [
+    {
+      "command": "kill 1234",
+      "description": "SIGTERM \u2014 ask process to exit"
+    },
+    {
+      "command": "kill -15 1234",
+      "description": "Same as SIGTERM"
+    },
+    {
+      "command": "kill -HUP 1234",
+      "description": "Reload/config hangup (daemons)"
+    },
+    {
+      "command": "kill -9 1234",
+      "description": "SIGKILL \u2014 force kill (last resort)"
+    },
+    {
+      "command": "kill -l",
+      "description": "List signal names"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-s SIGNAL",
+      "description": "Signal to send"
+    },
+    {
+      "flag": "-l",
+      "description": "List signals"
+    },
+    {
+      "flag": "-9",
+      "description": "SIGKILL"
+    },
+    {
+      "flag": "-15",
+      "description": "SIGTERM"
+    }
+  ],
+  "related": [
+    "killall",
+    "pkill",
+    "pgrep",
+    "ps",
+    "top"
+  ],
+  "notes": "Order of politeness: TERM (15) \u2192 wait \u2192 KILL (9). KILL cannot be caught."
+}

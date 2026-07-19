@@ -1,0 +1,52 @@
+{
+  "name": "man",
+  "description": "Read manual pages. Sections: 1 user commands, 2 syscalls, 3 library, 5 file formats, 8 admin.",
+  "synopsis": "man [OPTION]... [SECTION] PAGE...",
+  "tags": [
+    "shell",
+    "docs"
+  ],
+  "examples": [
+    {
+      "command": "man ls",
+      "description": "Manual for ls"
+    },
+    {
+      "command": "man 5 passwd",
+      "description": "File format for passwd"
+    },
+    {
+      "command": "man -k printf",
+      "description": "Search short descriptions (apropos)"
+    },
+    {
+      "command": "man -a printf",
+      "description": "All sections named printf"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-k KEYWORD",
+      "description": "Search (apropos)"
+    },
+    {
+      "flag": "-a",
+      "description": "All matching sections"
+    },
+    {
+      "flag": "-f",
+      "description": "Whatis short description"
+    },
+    {
+      "flag": "SECTION",
+      "description": "Manual section number"
+    }
+  ],
+  "related": [
+    "info",
+    "tldr",
+    "apropos",
+    "whatis"
+  ],
+  "notes": "This API exists partly for when man is unavailable \u2014 use ?q=<cmd> as a quick refresh."
+}

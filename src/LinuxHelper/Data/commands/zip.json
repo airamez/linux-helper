@@ -1,0 +1,54 @@
+{
+  "name": "zip",
+  "description": "Create ZIP archives (common for cross-platform exchange).",
+  "synopsis": "zip [OPTION]... zipfile file...",
+  "tags": [
+    "archive",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "zip archive.zip file1 file2",
+      "description": "Create zip"
+    },
+    {
+      "command": "zip -r project.zip project/",
+      "description": "Recursive directory"
+    },
+    {
+      "command": "zip -e secret.zip file",
+      "description": "Encrypt (prompt password)"
+    },
+    {
+      "command": "zip -u archive.zip newfile",
+      "description": "Update archive"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-r",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-e",
+      "description": "Encrypt"
+    },
+    {
+      "flag": "-u",
+      "description": "Update"
+    },
+    {
+      "flag": "-9",
+      "description": "Best compression"
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet"
+    }
+  ],
+  "related": [
+    "unzip",
+    "tar",
+    "7z"
+  ]
+}

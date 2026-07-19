@@ -1,0 +1,24 @@
+{
+  "name": "fg",
+  "description": "Resume a job in the foreground (takes terminal control).",
+  "synopsis": "fg [jobspec]",
+  "tags": [
+    "process",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "fg",
+      "description": "Foreground the current/previous job"
+    },
+    {
+      "command": "fg %2",
+      "description": "Foreground job 2"
+    }
+  ],
+  "options": [],
+  "related": [
+    "bg",
+    "jobs"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "cat",
+  "description": "Write file contents to standard output. Good for small files; use less/more for paging.",
+  "synopsis": "cat [OPTION]... [FILE]...",
+  "tags": [
+    "files",
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "cat file.txt",
+      "description": "Print a file"
+    },
+    {
+      "command": "cat a.txt b.txt",
+      "description": "Concatenate multiple files"
+    },
+    {
+      "command": "cat -n file.txt",
+      "description": "Number all output lines"
+    },
+    {
+      "command": "cat > file.txt",
+      "description": "Write stdin to file (Ctrl-D to end)"
+    },
+    {
+      "command": "cat >> file.txt",
+      "description": "Append stdin to file"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n",
+      "description": "Number output lines"
+    },
+    {
+      "flag": "-A",
+      "description": "Show non-printing chars (tabs, ends)"
+    },
+    {
+      "flag": "-s",
+      "description": "Squeeze repeated blank lines"
+    }
+  ],
+  "related": [
+    "less",
+    "more",
+    "head",
+    "tail",
+    "tac"
+  ]
+}

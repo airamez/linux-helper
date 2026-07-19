@@ -1,0 +1,43 @@
+{
+  "name": "jobs",
+  "description": "Show background/stopped jobs of the current shell session.",
+  "synopsis": "jobs [OPTION]... [jobspec]...",
+  "tags": [
+    "process",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "jobs",
+      "description": "List jobs"
+    },
+    {
+      "command": "jobs -l",
+      "description": "Include PIDs"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "Also list PIDs"
+    },
+    {
+      "flag": "-p",
+      "description": "PIDs only"
+    },
+    {
+      "flag": "-r",
+      "description": "Running only"
+    },
+    {
+      "flag": "-s",
+      "description": "Stopped only"
+    }
+  ],
+  "related": [
+    "bg",
+    "fg",
+    "nohup",
+    "disown"
+  ]
+}

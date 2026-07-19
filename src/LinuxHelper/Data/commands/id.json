@@ -1,0 +1,50 @@
+{
+  "name": "id",
+  "description": "Show uid, gid, and supplementary groups \u2014 essential for permission debugging.",
+  "synopsis": "id [OPTION]... [USER]",
+  "tags": [
+    "user",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "id",
+      "description": "Your ids and groups"
+    },
+    {
+      "command": "id alice",
+      "description": "Info for user alice"
+    },
+    {
+      "command": "id -u",
+      "description": "Numeric UID only"
+    },
+    {
+      "command": "id -gn",
+      "description": "Primary group name"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-u",
+      "description": "User ID only"
+    },
+    {
+      "flag": "-g",
+      "description": "Primary group ID"
+    },
+    {
+      "flag": "-G",
+      "description": "All group IDs"
+    },
+    {
+      "flag": "-n",
+      "description": "Names instead of numbers"
+    }
+  ],
+  "related": [
+    "whoami",
+    "groups",
+    "getent"
+  ]
+}

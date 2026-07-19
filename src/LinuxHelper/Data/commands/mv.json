@@ -1,0 +1,49 @@
+{
+  "name": "mv",
+  "description": "Move files/directories or rename them. Same filesystem = rename; otherwise copy+delete.",
+  "synopsis": "mv [OPTION]... SOURCE DEST\nmv [OPTION]... SOURCE... DIRECTORY",
+  "tags": [
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "mv old.txt new.txt",
+      "description": "Rename a file"
+    },
+    {
+      "command": "mv file.txt /tmp/",
+      "description": "Move into a directory"
+    },
+    {
+      "command": "mv -i a b",
+      "description": "Prompt before overwriting"
+    },
+    {
+      "command": "mv *.log logs/",
+      "description": "Move many files into a folder"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Prompt before overwrite"
+    },
+    {
+      "flag": "-f",
+      "description": "Do not prompt"
+    },
+    {
+      "flag": "-n",
+      "description": "Do not overwrite existing"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    }
+  ],
+  "related": [
+    "cp",
+    "rename",
+    "rm"
+  ]
+}

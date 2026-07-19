@@ -1,0 +1,67 @@
+{
+  "name": "ip",
+  "description": "Modern replacement for ifconfig/route. Part of iproute2.",
+  "synopsis": "ip [OPTIONS] OBJECT COMMAND",
+  "tags": [
+    "network",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "ip a",
+      "description": "Show addresses (ip addr)"
+    },
+    {
+      "command": "ip link",
+      "description": "Show interfaces"
+    },
+    {
+      "command": "ip r",
+      "description": "Show routes"
+    },
+    {
+      "command": "ip neigh",
+      "description": "Neighbor/ARP table"
+    },
+    {
+      "command": "sudo ip link set eth0 up",
+      "description": "Bring interface up"
+    },
+    {
+      "command": "sudo ip addr add 192.168.1.10/24 dev eth0",
+      "description": "Add address"
+    }
+  ],
+  "options": [
+    {
+      "flag": "addr / a",
+      "description": "Addresses"
+    },
+    {
+      "flag": "link",
+      "description": "Network devices"
+    },
+    {
+      "flag": "route / r",
+      "description": "Routing table"
+    },
+    {
+      "flag": "neigh",
+      "description": "Neighbor table"
+    },
+    {
+      "flag": "-br",
+      "description": "Brief output"
+    },
+    {
+      "flag": "-c",
+      "description": "Color"
+    }
+  ],
+  "related": [
+    "ss",
+    "ping",
+    "nmcli",
+    "ifconfig"
+  ]
+}

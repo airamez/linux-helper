@@ -1,0 +1,27 @@
+{
+  "name": "nohup",
+  "description": "Run a command that keeps running after logout; output defaults to nohup.out.",
+  "synopsis": "nohup COMMAND [ARG]...",
+  "tags": [
+    "process",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "nohup ./long-job.sh &",
+      "description": "Background job survives hangup"
+    },
+    {
+      "command": "nohup python server.py > server.log 2>&1 &",
+      "description": "With explicit log"
+    }
+  ],
+  "options": [],
+  "related": [
+    "disown",
+    "systemd",
+    "screen",
+    "tmux"
+  ],
+  "notes": "For services prefer systemd units over nohup."
+}

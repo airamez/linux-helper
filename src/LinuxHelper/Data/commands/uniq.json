@@ -1,0 +1,44 @@
+{
+  "name": "uniq",
+  "description": "Filter adjacent duplicate lines. Usually pipe sorted input into uniq.",
+  "synopsis": "uniq [OPTION]... [INPUT [OUTPUT]]",
+  "tags": [
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "sort file | uniq",
+      "description": "Unique lines"
+    },
+    {
+      "command": "sort file | uniq -c",
+      "description": "Count occurrences"
+    },
+    {
+      "command": "sort file | uniq -d",
+      "description": "Only duplicated lines"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-c",
+      "description": "Prefix count"
+    },
+    {
+      "flag": "-d",
+      "description": "Only print duplicates"
+    },
+    {
+      "flag": "-u",
+      "description": "Only print unique lines"
+    },
+    {
+      "flag": "-i",
+      "description": "Ignore case"
+    }
+  ],
+  "related": [
+    "sort",
+    "awk"
+  ]
+}

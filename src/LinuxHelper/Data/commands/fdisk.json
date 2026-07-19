@@ -1,0 +1,44 @@
+{
+  "name": "fdisk",
+  "description": "Manipulate partition tables. Use -l to list partitions on all (or one) disks without entering interactive mode.",
+  "synopsis": "fdisk [options] [device]\nfdisk -l [device...]",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "sudo fdisk -l",
+      "description": "List partitions on all disks"
+    },
+    {
+      "command": "sudo fdisk -l /dev/sda",
+      "description": "List partitions on one disk"
+    },
+    {
+      "command": "sudo fdisk /dev/sdb",
+      "description": "Interactive partition editor (careful)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "List partition tables"
+    },
+    {
+      "flag": "-s",
+      "description": "Print partition size in blocks"
+    },
+    {
+      "flag": "-w never",
+      "description": "Do not wipe signatures (when scripting)"
+    }
+  ],
+  "related": [
+    "lsblk",
+    "parted",
+    "blkid",
+    "cfdisk"
+  ],
+  "notes": "Destructive if used interactively without care. Prefer lsblk/fdisk -l for read-only inspection."
+}

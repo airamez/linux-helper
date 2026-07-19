@@ -1,0 +1,45 @@
+{
+  "name": "echo",
+  "description": "Write arguments to standard output. Useful in scripts and for quick prints.",
+  "synopsis": "echo [OPTION]... [STRING]...",
+  "tags": [
+    "text",
+    "shell"
+  ],
+  "examples": [
+    {
+      "command": "echo hello",
+      "description": "Print text"
+    },
+    {
+      "command": "echo -n 'no newline'",
+      "description": "Suppress trailing newline"
+    },
+    {
+      "command": "echo -e 'line1\\nline2'",
+      "description": "Interpret escapes"
+    },
+    {
+      "command": "echo $PATH",
+      "description": "Print a variable"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n",
+      "description": "No trailing newline"
+    },
+    {
+      "flag": "-e",
+      "description": "Enable backslash escapes"
+    },
+    {
+      "flag": "-E",
+      "description": "Disable escapes (default bash)"
+    }
+  ],
+  "related": [
+    "printf",
+    "cat"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "findmnt",
+  "description": "Find and list mounted filesystems (util-linux). Cleaner than raw mount output for inspecting what is mounted where.",
+  "synopsis": "findmnt [options]\nfindmnt [options] device|mountpoint",
+  "tags": [
+    "disk",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "findmnt",
+      "description": "Tree of all mounts"
+    },
+    {
+      "command": "findmnt -t ext4,xfs",
+      "description": "Only certain filesystem types"
+    },
+    {
+      "command": "findmnt /",
+      "description": "What is mounted on /"
+    },
+    {
+      "command": "findmnt -S /dev/sda1",
+      "description": "Where a device is mounted"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-t TYPES",
+      "description": "Limit by filesystem type"
+    },
+    {
+      "flag": "-S SOURCE",
+      "description": "By source device"
+    },
+    {
+      "flag": "-T TARGET",
+      "description": "By mount point"
+    },
+    {
+      "flag": "-o COLS",
+      "description": "Output columns"
+    },
+    {
+      "flag": "-J",
+      "description": "JSON output"
+    }
+  ],
+  "related": [
+    "mount",
+    "lsblk",
+    "df",
+    "blkid"
+  ]
+}

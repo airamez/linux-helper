@@ -1,0 +1,53 @@
+{
+  "name": "uname",
+  "description": "Print kernel name, hostname, kernel release, machine hardware, and more.",
+  "synopsis": "uname [OPTION]...",
+  "tags": [
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "uname -a",
+      "description": "All information"
+    },
+    {
+      "command": "uname -r",
+      "description": "Kernel release"
+    },
+    {
+      "command": "uname -m",
+      "description": "Machine architecture"
+    },
+    {
+      "command": "uname -s",
+      "description": "Kernel name (Linux)"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-a",
+      "description": "All"
+    },
+    {
+      "flag": "-r",
+      "description": "Kernel release"
+    },
+    {
+      "flag": "-m",
+      "description": "Machine"
+    },
+    {
+      "flag": "-n",
+      "description": "Nodename"
+    },
+    {
+      "flag": "-s",
+      "description": "Kernel name"
+    }
+  ],
+  "related": [
+    "hostnamectl",
+    "lsb_release",
+    "cat"
+  ]
+}

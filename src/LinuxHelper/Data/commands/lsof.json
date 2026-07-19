@@ -1,0 +1,60 @@
+{
+  "name": "lsof",
+  "description": "List files opened by processes \u2014 includes network sockets. Great for 'device busy' and port checks.",
+  "synopsis": "lsof [OPTION]... [FILE]...",
+  "tags": [
+    "process",
+    "files",
+    "network"
+  ],
+  "examples": [
+    {
+      "command": "lsof /var/log/syslog",
+      "description": "Who has this file open?"
+    },
+    {
+      "command": "sudo lsof -i :80",
+      "description": "Who listens/uses port 80"
+    },
+    {
+      "command": "lsof -u alice",
+      "description": "Files opened by alice"
+    },
+    {
+      "command": "lsof -p 1234",
+      "description": "Files for PID"
+    },
+    {
+      "command": "lsof -iTCP -sTCP:LISTEN",
+      "description": "Listening TCP sockets"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-i",
+      "description": "Internet sockets"
+    },
+    {
+      "flag": "-p PID",
+      "description": "Process"
+    },
+    {
+      "flag": "-u USER",
+      "description": "User"
+    },
+    {
+      "flag": "-c CMD",
+      "description": "Command name"
+    },
+    {
+      "flag": "+D DIR",
+      "description": "Directory recursion"
+    }
+  ],
+  "related": [
+    "ss",
+    "fuser",
+    "ps",
+    "netstat"
+  ]
+}

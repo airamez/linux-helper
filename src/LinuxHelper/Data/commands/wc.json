@@ -1,0 +1,54 @@
+{
+  "name": "wc",
+  "description": "Count lines, words, and bytes/characters in files or stdin.",
+  "synopsis": "wc [OPTION]... [FILE]...",
+  "tags": [
+    "text",
+    "files"
+  ],
+  "examples": [
+    {
+      "command": "wc file.txt",
+      "description": "Lines, words, bytes"
+    },
+    {
+      "command": "wc -l file.txt",
+      "description": "Line count only"
+    },
+    {
+      "command": "find . -name '*.py' | wc -l",
+      "description": "Count matching paths"
+    },
+    {
+      "command": "cat file | wc -w",
+      "description": "Word count from stdin"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-l",
+      "description": "Lines"
+    },
+    {
+      "flag": "-w",
+      "description": "Words"
+    },
+    {
+      "flag": "-c",
+      "description": "Bytes"
+    },
+    {
+      "flag": "-m",
+      "description": "Characters"
+    },
+    {
+      "flag": "-L",
+      "description": "Length of longest line"
+    }
+  ],
+  "related": [
+    "cat",
+    "grep",
+    "awk"
+  ]
+}

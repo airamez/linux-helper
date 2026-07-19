@@ -1,0 +1,24 @@
+{
+  "name": "groups",
+  "description": "List group memberships for a user.",
+  "synopsis": "groups [USERNAME]...",
+  "tags": [
+    "user"
+  ],
+  "examples": [
+    {
+      "command": "groups",
+      "description": "Your groups"
+    },
+    {
+      "command": "groups alice",
+      "description": "Groups for alice"
+    }
+  ],
+  "options": [],
+  "related": [
+    "id",
+    "getent",
+    "usermod"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "cut",
+  "description": "Select columns/bytes/characters from lines \u2014 simple field extraction.",
+  "synopsis": "cut OPTION... [FILE]...",
+  "tags": [
+    "text"
+  ],
+  "examples": [
+    {
+      "command": "cut -d: -f1 /etc/passwd",
+      "description": "First field, colon-separated"
+    },
+    {
+      "command": "cut -c1-10 file",
+      "description": "Characters 1\u201310"
+    },
+    {
+      "command": "echo 'a,b,c' | cut -d, -f2",
+      "description": "Middle CSV field"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-d DELIM",
+      "description": "Field delimiter"
+    },
+    {
+      "flag": "-f LIST",
+      "description": "Select fields"
+    },
+    {
+      "flag": "-c LIST",
+      "description": "Select characters"
+    },
+    {
+      "flag": "-b LIST",
+      "description": "Select bytes"
+    },
+    {
+      "flag": "--complement",
+      "description": "Invert selection (GNU)"
+    }
+  ],
+  "related": [
+    "awk",
+    "sed",
+    "paste"
+  ]
+}

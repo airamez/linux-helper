@@ -1,0 +1,46 @@
+{
+  "name": "watch",
+  "description": "Re-run a command on an interval \u2014 handy for monitoring.",
+  "synopsis": "watch [OPTION]... COMMAND",
+  "tags": [
+    "process",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "watch -n 1 df -h",
+      "description": "Disk usage every second"
+    },
+    {
+      "command": "watch 'ps aux | grep nginx'",
+      "description": "Watch matching processes"
+    },
+    {
+      "command": "watch -d free -h",
+      "description": "Highlight differences"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-n SEC",
+      "description": "Interval seconds"
+    },
+    {
+      "flag": "-d",
+      "description": "Highlight differences"
+    },
+    {
+      "flag": "-t",
+      "description": "No header"
+    },
+    {
+      "flag": "-e",
+      "description": "Freeze on error"
+    }
+  ],
+  "related": [
+    "top",
+    "htop",
+    "while"
+  ]
+}

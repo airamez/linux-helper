@@ -1,0 +1,69 @@
+{
+  "name": "apk",
+  "description": "Package manager for Alpine Linux \u2014 small, fast, used heavily in containers.",
+  "synopsis": "apk [options...] COMMAND [ARGS...]",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo apk update",
+      "description": "Refresh indexes"
+    },
+    {
+      "command": "sudo apk upgrade",
+      "description": "Upgrade packages"
+    },
+    {
+      "command": "sudo apk add nginx",
+      "description": "Install"
+    },
+    {
+      "command": "sudo apk del nginx",
+      "description": "Remove"
+    },
+    {
+      "command": "apk search keyword",
+      "description": "Search"
+    },
+    {
+      "command": "apk info nginx",
+      "description": "Package info"
+    },
+    {
+      "command": "apk info -L nginx",
+      "description": "List package contents"
+    }
+  ],
+  "options": [
+    {
+      "flag": "update",
+      "description": "Refresh"
+    },
+    {
+      "flag": "upgrade",
+      "description": "Upgrade"
+    },
+    {
+      "flag": "add / del",
+      "description": "Install / remove"
+    },
+    {
+      "flag": "search / info",
+      "description": "Discover"
+    },
+    {
+      "flag": "cache clean",
+      "description": "Clean cache"
+    }
+  ],
+  "related": [
+    "apk-tools"
+  ],
+  "distroVariants": {
+    "ubuntu": "Use: sudo apt install <pkg>",
+    "fedora": "Use: sudo dnf install <pkg>",
+    "arch": "Use: sudo pacman -S <pkg>",
+    "opensuse": "Use: sudo zypper install <pkg>"
+  }
+}

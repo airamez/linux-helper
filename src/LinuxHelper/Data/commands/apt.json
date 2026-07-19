@@ -1,0 +1,83 @@
+{
+  "name": "apt",
+  "description": "High-level package management for Debian-family systems: install, remove, update, search.",
+  "synopsis": "apt [options] command",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo apt update",
+      "description": "Refresh package indexes"
+    },
+    {
+      "command": "sudo apt upgrade",
+      "description": "Upgrade installed packages"
+    },
+    {
+      "command": "sudo apt install nginx",
+      "description": "Install a package"
+    },
+    {
+      "command": "sudo apt remove nginx",
+      "description": "Remove package (keep config)"
+    },
+    {
+      "command": "sudo apt purge nginx",
+      "description": "Remove package and config"
+    },
+    {
+      "command": "apt search keyword",
+      "description": "Search packages"
+    },
+    {
+      "command": "apt show nginx",
+      "description": "Package details"
+    },
+    {
+      "command": "apt list --upgradable",
+      "description": "What can be upgraded"
+    }
+  ],
+  "options": [
+    {
+      "flag": "update",
+      "description": "Resynchronize package index"
+    },
+    {
+      "flag": "upgrade",
+      "description": "Install newer versions"
+    },
+    {
+      "flag": "install",
+      "description": "Install packages"
+    },
+    {
+      "flag": "remove / purge",
+      "description": "Uninstall"
+    },
+    {
+      "flag": "search / show",
+      "description": "Discover packages"
+    },
+    {
+      "flag": "autoremove",
+      "description": "Remove unused dependencies"
+    }
+  ],
+  "related": [
+    "dpkg",
+    "apt-get",
+    "apt-cache",
+    "snap"
+  ],
+  "notes": "Prefer apt over apt-get for interactive use. Always update before upgrade/install.",
+  "distroVariants": {
+    "fedora": "Use: sudo dnf install <pkg>",
+    "rhel": "Use: sudo dnf install <pkg>",
+    "centos": "Use: sudo dnf install <pkg>",
+    "arch": "Use: sudo pacman -S <pkg>",
+    "opensuse": "Use: sudo zypper install <pkg>",
+    "alpine": "Use: sudo apk add <pkg>"
+  }
+}

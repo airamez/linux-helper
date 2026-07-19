@@ -1,0 +1,50 @@
+{
+  "name": "install",
+  "description": "Meta entry: how to install packages on each major distro. Set ?d=<distro> for the matching command.",
+  "synopsis": "see distro variants",
+  "tags": [
+    "package"
+  ],
+  "examples": [
+    {
+      "command": "sudo apt install <pkg>",
+      "description": "Debian / Ubuntu"
+    },
+    {
+      "command": "sudo dnf install <pkg>",
+      "description": "Fedora / RHEL / Rocky / Alma"
+    },
+    {
+      "command": "sudo pacman -S <pkg>",
+      "description": "Arch / Manjaro"
+    },
+    {
+      "command": "sudo zypper install <pkg>",
+      "description": "openSUSE"
+    },
+    {
+      "command": "sudo apk add <pkg>",
+      "description": "Alpine"
+    }
+  ],
+  "options": [],
+  "related": [
+    "apt",
+    "dnf",
+    "pacman",
+    "apk",
+    "zypper",
+    "update"
+  ],
+  "notes": "Pass ?d=ubuntu|fedora|arch|... to highlight your distro's command.",
+  "distroVariants": {
+    "ubuntu": "sudo apt update && sudo apt install <package>",
+    "debian": "sudo apt update && sudo apt install <package>",
+    "fedora": "sudo dnf install <package>",
+    "rhel": "sudo dnf install <package>",
+    "centos": "sudo dnf install <package>",
+    "arch": "sudo pacman -S <package>",
+    "opensuse": "sudo zypper install <package>",
+    "alpine": "sudo apk add <package>"
+  }
+}

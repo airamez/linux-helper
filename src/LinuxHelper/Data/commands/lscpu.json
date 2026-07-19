@@ -1,0 +1,41 @@
+{
+  "name": "lscpu",
+  "description": "Summarize CPU, cores, threads, caches, virtualization flags from sysfs/proc.",
+  "synopsis": "lscpu [OPTION]",
+  "tags": [
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "lscpu",
+      "description": "CPU overview"
+    },
+    {
+      "command": "lscpu -e",
+      "description": "Extended per-CPU table"
+    },
+    {
+      "command": "lscpu -J",
+      "description": "JSON output"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-e",
+      "description": "Extended mode"
+    },
+    {
+      "flag": "-J",
+      "description": "JSON"
+    },
+    {
+      "flag": "-p",
+      "description": "Parseable"
+    }
+  ],
+  "related": [
+    "nproc",
+    "cat",
+    "lshw"
+  ]
+}

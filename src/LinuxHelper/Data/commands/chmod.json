@@ -1,0 +1,58 @@
+{
+  "name": "chmod",
+  "description": "Change read/write/execute permissions for owner, group, and others. Symbolic (u+x) or octal (755).",
+  "synopsis": "chmod [OPTION]... MODE[,MODE]... FILE...\nchmod [OPTION]... OCTAL-MODE FILE...",
+  "tags": [
+    "files",
+    "permissions",
+    "security"
+  ],
+  "examples": [
+    {
+      "command": "chmod +x script.sh",
+      "description": "Make executable for all (who have access)"
+    },
+    {
+      "command": "chmod 755 script.sh",
+      "description": "rwxr-xr-x"
+    },
+    {
+      "command": "chmod 600 secret.key",
+      "description": "rw------- (owner only)"
+    },
+    {
+      "command": "chmod -R u+rwX project/",
+      "description": "Recursive owner read/write/exec on dirs"
+    },
+    {
+      "command": "chmod g+w file",
+      "description": "Add group write"
+    }
+  ],
+  "options": [
+    {
+      "flag": "-R",
+      "description": "Recursive"
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose"
+    },
+    {
+      "flag": "-c",
+      "description": "Report only when a change is made"
+    },
+    {
+      "flag": "--reference=RFILE",
+      "description": "Copy mode from RFILE"
+    }
+  ],
+  "related": [
+    "chown",
+    "chgrp",
+    "umask",
+    "ls",
+    "stat"
+  ],
+  "notes": "Octal: owner-group-other; 4=r, 2=w, 1=x. So 7=rwx, 6=rw-, 5=r-x, 4=r--."
+}

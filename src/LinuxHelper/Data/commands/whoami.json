@@ -1,0 +1,26 @@
+{
+  "name": "whoami",
+  "description": "Print the username associated with the current effective user ID.",
+  "synopsis": "whoami",
+  "tags": [
+    "user",
+    "system"
+  ],
+  "examples": [
+    {
+      "command": "whoami",
+      "description": "Current effective user"
+    },
+    {
+      "command": "sudo whoami",
+      "description": "Usually prints root"
+    }
+  ],
+  "options": [],
+  "related": [
+    "id",
+    "who",
+    "w",
+    "logname"
+  ]
+}
