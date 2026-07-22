@@ -231,10 +231,11 @@ public sealed class CommandCatalogService
         sb.AppendLine("  Params: q|query, list=basic|full  (also full=1)");
         sb.AppendLine();
         sb.AppendLine("EXAMPLES");
-        sb.AppendLine("  curl 'http://localhost:5000/'");
-        sb.AppendLine("  curl 'http://localhost:5000/?list=full'");
-        sb.AppendLine("  curl 'http://localhost:5000/?q=ls'");
-        sb.AppendLine("  curl 'http://localhost:5000/?q=permission'");
+        var baseUrl = "https://linux-helper.com";
+        sb.AppendLine($"  curl '{baseUrl}/'");
+        sb.AppendLine($"  curl '{baseUrl}/?list=full'");
+        sb.AppendLine($"  curl '{baseUrl}/?q=ls'");
+        sb.AppendLine($"  curl '{baseUrl}/?q=permission'");
         sb.AppendLine();
         sb.AppendLine($"LIST:  {(listMode == ListMode.Basic ? "basic" : "full")}  ({visible.Count} commands)");
         if (listMode == ListMode.Basic)

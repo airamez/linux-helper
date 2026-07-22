@@ -116,10 +116,10 @@ dotnet run --project src/LinuxHelper
 The API listens on `http://localhost:5000` by default (see `appsettings.json` / launch settings).
 
 ```bash
-curl 'http://localhost:5000/'
-curl 'http://localhost:5000/?list=full'
-curl 'http://localhost:5000/?q=ls'
-curl 'http://localhost:5000/?q=permission'
+curl 'https://linux-helper.com/'
+curl 'https://linux-helper.com/?list=full'
+curl 'https://linux-helper.com/?q=ls'
+curl 'https://linux-helper.com/?q=permission'
 ```
 
 Self-hosting is useful for air-gapped networks, custom command sets for your team, or development against a local checkout.
@@ -130,7 +130,7 @@ Self-hosting is useful for air-gapped networks, custom command sets for your tea
 docker build -t linux-helper .
 docker run --rm -e PORT=8080 -p 8080:8080 linux-helper
 
-curl 'http://localhost:8080/?q=ls'
+curl 'https://linux-helper.com/?q=ls'
 ```
 
 ### Deploy to Google Cloud Run
